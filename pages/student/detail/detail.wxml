@@ -78,7 +78,7 @@
     <view class='bottomitem1' bindtap='call'>申请</view>
   </view>
 
-  <view class='mask' style='display:{{maskdisplay}}'></view>
+  <view class='mask' style='display:{{maskdisplay}}' bindtap='hidden'></view>
   <view class='content' style='display:{{maskdisplay}}'>
   <form bindsubmit="formSubmit">
    <view class='picker'>
