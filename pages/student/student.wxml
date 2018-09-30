@@ -1,0 +1,73 @@
+<!--*头部*-->
+<view class='fristcontent'>
+  <view class='display1'>
+    <i class="iconfont icon-personal-center" style="font-size:18px;margin-right:5px"></i>
+    <text>找学生</text>
+  </view>
+  <view class='display2'>
+     <i class="iconfont icon-didian" style="font-size:18px;margin-right:5px"></i>
+     <text>{{localtion}}</text>
+  </view>
+</view>
+
+<!--*筛选器*-->
+<view class='select'>
+  <view class="section">
+      <picker bindchange="pickercity" value="{{index}}" range="{{array}}">
+        <view class="pickerclass" wx:if="{{array[index]==null}}">
+          <text>上课区域</text>
+          <i class="icon iconfont icon-xiangxia1" style="margin-left:8px;font-size:14px"></i>
+        </view>
+        <view class="picker" wx:else>
+          <text>{{array[index]}}</text>
+          <i class="icon iconfont icon-xiangxia1" style="margin-left:8px;font-size:14px"></i>
+        </view>
+      </picker>
+  </view>
+  <view class="section">
+      <picker bindchange="pickerclass" value="{{index1}}" range="{{array1}}">
+        <view class="picker" wx:if="{{array1[index1]==null}}">
+          <text>学生年级</text>
+          <i class="icon iconfont icon-xiangxia1" style="margin-left:8px;font-size:14px"></i>
+        </view>
+        <view class="picker" wx:else>
+          <text>{{array1[index1]}}</text>
+          <i class="icon iconfont icon-xiangxia1" style="margin-left:8px;font-size:14px"></i>
+        </view>
+      </picker>
+  </view>
+</view>
+
+<!--*内容展示*-->
+<scroll-view scroll-y class='scrollview'>
+<view wx:if="{{studentinfo.length==0}}" style='text-align:center'>
+     <view style='margin:5% 0'><i class="icon iconfont icon-kulian1 icon-none"></i></view>
+     <view style='font-size:16px'>没有数据</view>
+  </view>
+  <view wx:else>
+  <view wx:for="{{studentinfo}}" wx:key="{{index}}" class='listitem' bindtap='gotodetail' data-id='{{item.objectId}}'>
+    <view class='leftitem'>
+      <view>
+       <text class='city'>{{item.city}}:</text>
+       <text class='subject'>{{item.subject}}</text>
+      </view>
+      <view style='font-size:14px' class='introduce'>{{item.introduce}}</view>
+      <view style='font-size:14px' class='introduce'>
+       <i class="iconfont icon-didian"></i>
+       <text>{{item.localtion}}</text>
+      </view>
+    </view>
+
+    <view class='rightitem'>
+      <view>学员：{{item.sex}}</view>
+      <view style='color:#ffcc00'>{{item.pay}}</view>
+      <view>{{item.updatedAt}}</view>
+    </view>
+  </view>
+  </view>
+</scroll-view>
+
+<!--*发布按钮*-->
+<view bindtap='publish' class='publish' style='display:{{publishbutton}}'>
+  <i class="iconfont icon-fabu icon-publish"></i>
+</view>

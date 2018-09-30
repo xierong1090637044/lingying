@@ -1,0 +1,69 @@
+.allcontent
+{
+  width: 90%;
+  margin: 0 auto;
+  background: #fff;
+  padding: 10px;
+  text-align: center;
+}
+.avatar
+{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.username
+{
+  font-size: 15px;
+  margin-top: 10px;
+}
+.second
+{
+  text-align: left;
+  font-size: 16px;
+  margin: 10px  0 5px ;
+}
+.one
+{
+  color: #999;
+  margin-right: 10px;
+}
+.two
+{
+  color: #1437e9;
+  margin-left: 10px;
+}
+.three
+{
+  color: coral;
+  margin: 0 10px 0;
+}
+
+.codeimg
+{
+  width: 180px;
+  height:200px
+}
+.bottom
+{
+  margin-top: 5%;
+}
+.notice
+{
+  font-size: 18px;
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+.notice1
+{
+  font-size: 16px;
+  font-weight: bold;
+}
+.notice3
+{
+  color: #999;
+  font-size: 14px;
+  margin-top: 40px;
+  text-align: center
+}

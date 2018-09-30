@@ -1,0 +1,66 @@
+@import 'iconfont.wxss';
+page{
+  background: #efefef;
+}
+.personicon
+{
+  font-size: 20px;
+  color: #999;
+}
+.personicon1
+{
+  font-size: 20px;
+  color: #fff
+}
+
+.display1
+{
+  display: inline-block
+}
+.display2
+{
+  float: right;
+}
+button::after
+{
+  border: none;
+}
+button{
+  position:relative;
+  display:block;
+  margin-left:unset;
+  margin-right:unset;
+  padding-left:unset;
+  padding-right:unset;
+  box-sizing:unset;
+  font-size:unset;
+  text-align:unset;
+  text-decoration:unset;
+  line-height:unset;
+  border-radius:unset;
+  -webkit-tap-highlight-color:unset;
+  overflow:unset;
+  color:unset;
+  background-color:unset;
+  margin: 0 auto;
+}
+.publish
+{
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #1888df;
+  position: fixed;
+  right: 5%;
+  bottom: 10%;
+}
+.icon-publish
+{
+  color: #1888df;
+  font-size: 30px;
+  font-weight: bold;
+}
+

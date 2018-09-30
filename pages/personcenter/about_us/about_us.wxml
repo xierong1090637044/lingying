@@ -1,0 +1,30 @@
+<!--pages/about_us/about_us.wxml-->
+<view class='content'>
+  <image src='http://bmob-cdn-18174.b0.upaiyun.com/2018/08/02/2fa0961640b9367980c31c8078876cca.jpg' class='bacimage'></image>
+  <view class='textjs'>
+    <view class='mxicon'><i class="icon iconfont icon-icon"></i></view>
+    <view>那就顺其自然吧，反正你也无能为力</view>
+    <view style='font-size:14px;'>倒不如花时间去让自己变得更好</view>
+    <view style='font-size:16px;font-style:italic'>然后用更好的自己去迎接更好的未来</view>
+  </view>
+  <view style='width:100%;float:left;margin-top: 5%;'>
+   <image src='https://wx.qlogo.cn/mmopen/vi_32/pIvEJIUsvHIe5NiaF3hMm8svIg4JCzg6CwUrjtNBDFVyHukDhAHb0G6rKhyesTppZwfd63hHic5EXKpNoyicoptfg/132' class='avatar1' ></image>
+   <view class='yqicon'><i class="icon1 iconfont icon-mengxiang2"></i></view>
+   <image src='https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIbyNaMwOBgU3JPFLH0VC1NtdavlO9P0P1sxfe7lSy5p4DPhXWMezLnQErJLLtSksHyLWxIxH5mZg/132' class='avatar'></image>
+  </view>
+
+  <view class='thirdfloor'>
+    <view class='lxwmicon'><i class="icon1 iconfont icon-icon8"></i></view>
+    <view style='font-size:13px;margin-top:10px;'>
+      <text>微信：</text>
+      <text style='color:#0986d5' bindtap='copy' data-id='xierong1090637044'>xierong1090637044</text>
+      <text> 或 </text>
+      <text style='color:#0986d5' bindtap='copy' data-id='heqihang574631511'>heqihang574631511</text>
+    </view>
+    <view style='font-size:13px;margin-top:10px;'>
+      <text>邮箱：</text>
+      <text style='color:#0986d5' bindtap='copy' data-id='xr@starytech.cn'>xr@starytech.cn</text>
+    </view>
+    <view style='font-size:13px;margin-top:3px;color:#999'>（点击可复制）</view>
+  </view>
+</view>

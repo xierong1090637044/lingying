@@ -1,0 +1,88 @@
+<!--第一部分-->
+<view style='display:{{display1}}' class='frist'>
+  <button open-type='getUserInfo' class='loginbutton' plain='true' bindgetuserinfo="onGotUserInfo">登录</button>
+</view>
+<view style='display:{{display2}}' class='frist'>
+  <image src='{{user.avatar}}' class='avatar'></image>
+  <view class='name'>{{user.username}}</view>
+</view>
+
+<!--第二部分-->
+<view class='alllist'>
+<!--正在审核显示-->
+<view class="trstyle" wx:if="{{user.identity == '正在审核'}}">
+    <view class='leftitem'>
+      <view class='iconborder color1'><i class="icon iconfont icon-personal-center personicon1"></i></view><text>我的认证</text>
+    </view>
+    <view class='leftitem' style="float:right">
+      <text style='color:#e48618'>正在审核</text>
+      <i class="icon iconfont icon-youbian personicon"></i>
+    </view>
+  </view>
+
+  <view class="trstyle" bindtap='gotoidentify' wx:else>
+    <view class='leftitem'>
+      <view class='iconborder color1'><i class="icon iconfont icon-personal-center personicon1"></i></view><text>我的认证</text>
+    </view>
+    <view class='leftitem' style="float:right">
+      <text wx:if="{{user.identity == null ||user.identity == ''}}" style='color:#999'>去认证</text>
+      <text wx:elif="{{user.identity =='未通过'}}"style='color:#ee1111'>未通过</text>
+      <text wx:else>已认证</text>
+      <i class="icon iconfont icon-youbian personicon"></i>
+    </view>
+  </view>
+
+  <view class="trstyle" bindtap='gotoedit'>
+    <view class='leftitem'>
+      <view class='iconborder color6'><i class="icon iconfont icon-icon personicon1"></i></view><text>我的发布</text>
+    </view>
+    <view class='leftitem' style="float:right"><i class="icon iconfont icon-youbian personicon"></i></view>
+  </view>
+
+
+  <view class="trstyle" bindtap='gotomyorder'>
+    <view class='leftitem'>
+      <view class='iconborder color2'><i class="icon iconfont icon-kecheng personicon1"></i></view><text>我的申请</text>
+    </view>
+    <view class='leftitem' style="float:right"><i class="icon iconfont icon-youbian personicon"></i></view>
+  </view>
+
+  <view class="trstyle" bindtap='bindmobile'>
+    <view class='leftitem'>
+      <view class='iconborder color4'><i class="icon iconfont icon-6 personicon1"></i></view><text>我的手机</text>
+    </view>
+    <view class='leftitem' style="float:right">
+       <text wx:if="{{user.mobilePhoneNumber == null||user.mobilePhoneNumber==''}}" style='color:#999'>去绑定</text>
+       <text wx:else>已绑定</text>
+       <i class="icon iconfont icon-youbian personicon"></i>
+    </view>
+  </view>
+
+  <view class="trstyle">
+    <button open-type='openSetting'>
+    <view class='leftitem'>
+      <view class='iconborder color3'><i class="icon iconfont icon-guanyuwomen1 personicon1"></i></view><text>权限设置</text>
+    </view>
+    <view class='leftitem' style="float:right"><i class="icon iconfont icon-youbian personicon"></i></view>
+    </button>
+  </view>
+
+  <view class="trstyle" bindtap='gotoaboutus'>
+    <view class='leftitem'>
+      <view class='iconborder color5'><i class="icon iconfont icon-icon- personicon1"></i></view><text>关于我们</text>
+    </view>
+    <view class='leftitem' style="float:right"><i class="icon iconfont icon-youbian personicon"></i></view>
+  </view>
+</view>
+
+<view class='mask' style='display:{{mask}}' bindtap='hidden'></view>
+<view class='header' style='display:{{mask}}'>
+  <view>
+    <input disabled='true' value='{{phone}}' type='number' class='inputmob'></input>
+  </view>
+
+  <view class='button'>
+   <button open-type="getPhoneNumber" bindgetphonenumber="getphone" style='display:{{display3}}'>获取手机号</button>
+    <button style='display:{{display4}}' bindtap='modify'>修改</button>
+  </view>
+</view>

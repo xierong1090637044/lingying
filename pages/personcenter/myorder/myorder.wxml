@@ -1,0 +1,74 @@
+<!--pages/personcenter/myorder/myorder.wxml-->
+<view style='display:{{display1}}'>
+<view class='alllist' bindtap='gotodetail' data-id='{{detail.teacher.objectId}}'>
+    <view class='imageview'>
+      <image src='{{user.avatar}}' class='image'></image>
+    </view>
+    <view class='contentview'>
+      <view class="onefloor">
+        <text>{{user.username}}</text>
+        <text wx:if="{{user.gender ==1}}">（男）</text>
+        <text wx:else>（女）</text>
+        <text>{{detail.teacher.class}}</text>
+      </view>
+      <view class="secondfloor">
+        <text>{{detail.teacher.school}}</text>
+      </view>
+      <view class="secondfloor" style='padding-bottom:5px'>
+        <view class='icontext'>身</view>
+        <text>{{user.identity}}</text>
+        <view class='icontext1'>证</view>
+        <text>已认证</text>
+      </view>
+      <view class="secondfloor introduce">{{detail.teacher.introduce}}</view>
+    </view>
+</view>
+<view class='bottomitem'>
+   <button class='giveout' bindtap='giveout'>取消</button>
+   <button class='call' bindtap='call'>自行联系</button>
+</view>
+
+<view class='notice'>
+    <view>为保证安全</view>
+    <view>我们的客服届时会联系双方进行信息的确认</view>
+    <view>确认完成后，你可以自主联系学生，也可让我们联系</view>
+</view>
+</view>
+
+<!--没有内容显示-->
+<view style='text-align:center;display:{{display2}}'>
+   <view style='margin:5% 0'><i class="icon iconfont icon-kulian1 icon-none"></i></view>
+    <view style='font-size:16px'>您还没进行过申请</view>
+</view>
+
+<view style='display:{{display3}}'>
+<view class='listitem' bindtap='gotodetail_s' data-id='{{detail_s.objectId}}'>
+  <view class='leftitem'>
+      <view>
+       <text class='city'>{{detail_s.city}}:</text>
+       <text class='subject'>{{detail_s.subject}}</text>
+      </view>
+      <view style='font-size:14px' class='introduce1'>{{detail_s.introduce}}</view>
+      <view style='font-size:14px' class='introduce1'>
+       <i class="iconfont icon-didian"></i>
+       <text>{{detail_s.localtion}}</text>
+      </view>
+    </view>
+
+    <view class='rightitem'>
+      <view>学员：{{detail_s.sex}}</view>
+      <view style='color:#ffcc00'>{{detail_s.pay}}</view>
+      <view>{{detail_s.updatedAt}}</view>
+    </view>
+</view>
+<view class='bottomitem'>
+      <button class='giveout' bindtap='giveout'>取消</button>
+      <button class='call' bindtap='call'>自行联系</button>
+    </view>
+
+<view class='notice'>
+    <view>为保证安全</view>
+    <view>我们的客服届时会联系双方进行信息的确认</view>
+    <view>确认完成后，你可以自主联系家长，也可让我们联系</view>
+</view>
+</view>

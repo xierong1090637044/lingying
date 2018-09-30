@@ -1,0 +1,99 @@
+::-webkit-scrollbar
+{
+width: 0;
+height: 0;
+color: transparent;
+}
+.fristcontent
+{
+  padding: 10px;
+  background: #c4e2d8;
+  color: #fff;
+  font-size: 16px;
+}
+.list
+{
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  justify-content:space-between;
+  color: #000;
+  line-height: 30px;
+  font-size: 16px;
+  padding:5px 10px;
+  border-bottom: 1px solid#ddd;
+}
+.left
+{
+  color: #666
+}
+.border
+{
+  border-bottom: 1px solid#ddd;
+}
+
+.title
+{
+  color: #ffcc00;
+  font-weight: bold;
+  line-height: 40px;
+  font-size: 18px;
+  text-align: center;
+}
+.notice
+{
+  color: #999;
+  font-size: 14px;
+  text-align: left;
+  padding: 10px 10px;
+}
+
+.bottom
+{
+  position: fixed;
+  bottom: 0%;
+  left: 0;
+  width: 100%;
+  background: #fafafa;
+  z-index: 100;
+}
+.bottomitem
+{
+  float: left;
+  width: calc(25% - 20px);
+  text-align: center;
+  padding: 8px 10px 12px;
+  height: 35px;
+}
+.bottomitem1
+{
+  float: left;
+  width: calc(25% - 20px);
+  text-align: center;
+  padding: 8px 10px 12px;
+  background: #ffcc00;
+  color: #fff;
+  font-weight: bold;
+  line-height: 35px;
+  height: 35px;
+  font-size: 16px;
+}
+.icon3{
+  color:#000;
+  font-size:25px;
+}
+.detail
+{
+  max-width: 70%;
+  line-height:20px;
+}
+.scrollview
+{
+  max-height: calc(100vh - 60px);
+}
+.detailoverflow
+{
+  max-width: 70%;
+  white-space: nowrap;
+  overflow: scroll;
+}

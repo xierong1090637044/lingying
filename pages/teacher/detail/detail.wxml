@@ -1,0 +1,87 @@
+<view class='header'>
+  <view class='background'></view>
+  <view class='overflow'>
+    <image class='avatar' src='{{detail.parent.avatar}}'></image>
+    <view class='username'>{{detail.parent.username}}</view>
+    <view class='identity'>{{detail.parent.identity}}</view>
+    <view class='getlook'>已认证</view>
+  </view>
+</view>
+
+<view class='secondfloor'>
+  <view class='headertext'>| 基本信息</view>
+  <view class='item1display'>
+    <view class='item1'>就读大学：</view>
+    <view>{{detail.school}}</view>
+  </view>
+  <view class='item1display'>
+    <view class='item1'>目前身份：</view>
+    <view>{{detail.class}}</view>
+  </view>
+  <view class='item1display'>
+    <view class='item1'>专业：</view>
+    <view>{{detail.major}}</view>
+  </view>
+  <view class='item1display'>
+    <view class='item1'>性别：</view>
+    <view wx:if="{{detail.parent.gender==1}}">男生</view>
+    <view wx:else>女生</view>
+  </view>
+</view>
+
+<view class='secondfloor'>
+  <view class='headertext'>| 自我描述</view>
+  <view class='introduce'>{{detail.introduce}}</view>
+</view>
+
+<view class='secondfloor'>
+  <view class='headertext'>| 可教科目</view>
+  <view wx:for="{{detail.can_teach}}" wx:key="{{idex}}" class='listsub'>{{item}}</view>
+</view>
+
+<view class='secondfloor'>
+  <view class='headertext'>| 可教城市</view>
+  <view wx:if="{{detail.can_teach_city == null}}">暂无</view>
+  <view wx:else>{{detail.can_teach_city}}</view>
+</view>
+
+<view class='secondfloor'>
+  <view class='headertext'>| 所获证书</view>
+  <view wx:if="{{detail.award == null}}">暂无</view>
+  <view wx:else>{{detail.award}}</view>
+</view>
+
+<view class='secondfloor'>
+  <view class='headertext'>| 辅导方式</view>
+  <view wx:for="{{detail.by_way}}" wx:key="{{idex}}" class='listsub'>{{item}}</view>
+</view>
+
+<view class='secondfloor'>
+  <view class='headertext'>| 家教经验</view>
+  <view wx:if="{{detail.expire == null}}">暂无</view>
+  <view wx:else>{{detail.expire}}</view>
+</view>
+
+<view class='secondfloor' style='margin-bottom:25%'>
+  <view class='headertext'>| 薪资要求</view>
+  <view wx:if="{{detail.pay == null}}">暂无</view>
+  <view wx:else>{{detail.pay}}元/小时</view>
+</view>
+
+ <view class='bottom'>
+    <view class='bottomitem' bindtap='goback'>
+      <view><i class="iconfont icon-iconhuidaoshouye icon3"></i></view>
+      <view style='font-size:12px'>登录</view>
+    </view>
+    <view class='bottomitem'>
+      <button open-type='share'>
+      <view><i class="iconfont icon-fenxiang-copy icon3"></i></view>
+      <view style='font-size:12px'>分享</view>
+      </button>
+    </view>
+    <view class='bottomitem' bindtap='sharefriend'>
+      <view><i class="iconfont icon-pengyouquan icon3"></i></view>
+      <view style='font-size:12px'>分享朋友圈</view>
+    </view>
+    <view class='bottomitem1' bindtap='call'>预约</view>
+  </view>

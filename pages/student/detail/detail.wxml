@@ -1,0 +1,79 @@
+<scroll-view scroll-y="true" class='scrollview'>
+<view>
+  <view class='list'>
+   <view class='left'>求教科目</view>
+   <view>{{detail.student.subject}}</view>
+  </view>
+
+  <view class='list'>
+   <view class='left'>家教费用</view>
+   <view>{{detail.student.pay}}</view>
+  </view>
+
+  <view class='list'>
+   <view class='left'>学生年级</view>
+   <view>{{detail.class}}</view>
+  </view>
+
+  <view class='list'>
+   <view class='left'>授课区域</view>
+   <view>{{detail.student.city}}</view>
+  </view>
+
+  <view class='list' bindtap='gotothis'>
+   <view class='left'>详细地址</view>
+   <view class='detailoverflow'>
+     {{detail.student.localtion}}
+     <i class="iconfont icon-icon" style="font-size:18px;margin-left:5px;color:#2ca879;font-weight:bold"></i>
+    </view>
+  </view>
+
+  <view class='list'>
+   <view class='left'>授课时间</view>
+   <view>{{detail.course_time}}</view>
+  </view>
+
+  <view class='list'>
+   <view class='left'>学员详情</view>
+   <view class='detail'>{{detail.student.introduce}}</view>
+  </view>
+</view>
+
+<view class='title'>教员要求</view>
+
+<view>
+  <view class='list'>
+   <view class='left'>教员资质</view>
+   <view>{{detail.aptitude}}</view>
+  </view>
+
+  <view class='list'>
+   <view class='left'>教员性别</view>
+   <view>{{detail.t_sex}}</view>
+  </view>
+
+  <view class='list'>
+   <view class='left'>教员要求</view>
+   <view class='detail'>{{detail.require}}</view>
+  </view>
+</view>
+
+<view class='notice'>注意：申请订单后，如条件匹配，客服会在1-2个工作日与您联系，如若超过2个工作日，请申请其他订单</view>
+</scroll-view>
+ <view class='bottom'>
+    <view class='bottomitem' bindtap='goback'>
+      <view><i class="iconfont icon-iconhuidaoshouye icon3"></i></view>
+      <view style='font-size:12px'>登录</view>
+    </view>
+    <view class='bottomitem'>
+      <button open-type='share'>
+      <view><i class="iconfont icon-fenxiang-copy icon3"></i></view>
+      <view style='font-size:12px'>分享</view>
+      </button>
+    </view>
+    <view class='bottomitem' bindtap='jubao'>
+      <view><i class="iconfont icon-jubao icon3"></i></view>
+      <view style='font-size:12px'>举报</view>
+    </view>
+    <view class='bottomitem1' bindtap='call'>申请</view>
+  </view>

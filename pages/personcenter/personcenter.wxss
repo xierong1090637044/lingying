@@ -1,0 +1,140 @@
+page{
+  background: #fafafa;
+  text-align: center;
+  padding: 0px 2rem;
+  width: calc(100% - 4rem);
+}
+.loginbutton
+{
+  width: 3.5rem;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  font-size: 12px;
+  border-radius: 50%;
+  margin-top:1rem;
+  border:1px solid#fafafa;
+}
+.avatar
+{
+   width: 3.5rem;
+  height: 3.5rem;
+  font-size: 12px;
+  border-radius: 50%;
+  margin-top:1rem;
+  margin-bottom: 0.5rem;
+  border:1px solid#fafafa;
+}
+.name
+{
+  font-size: 12px;
+}
+.frist
+{
+  padding: 0 0 1rem;
+}
+.iconborder
+{
+  display: inline-block;
+}
+.trstyle
+{
+  width: 100%;
+  text-align: left;
+  font-size: 16px;
+  line-height: 45px;
+  border-bottom: 1px solid#999;
+  float: left;
+}
+.leftitem
+{
+  float:left;
+}
+.rightitem
+{
+  float:right;
+}
+.iconborder
+{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  line-height: 30px;
+  text-align: center;
+  margin-right: 5px;
+}
+.alllist
+{
+  padding: 0.5rem;
+  border:1px solid#2ca879;
+  border-radius: 4px;
+  float: left;
+}
+.color1
+{
+  background: #2bcaae;
+}
+.color2
+{
+  background: #cabf49;
+}
+.color3
+{
+  background: #49cab9;
+}
+.color4
+{
+  background: #ad49ca;
+}
+.color5
+{
+  background: #ca4976;
+}
+.color6
+{
+  background: #e514d4
+}
+
+.mask
+{
+  position: fixed;
+  top:0%;
+  width:100%;
+  left: 0%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+}
+.inputmob
+{
+  border: 2px solid#c4e2d8;
+  border-radius: 4px;
+  padding: 5px 0 5px 2px;
+  text-align: left;
+}
+.header
+{
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  justify-content: space-between;
+  position: fixed;
+  width: 80%;
+  left: calc(10% - 20px);
+  background: #fafafa;
+  z-index: 101;
+  border-radius: 4px
+}
+.button
+{
+  background: #2ca879;
+  color: #fff;
+  line-height: 35px;
+  height: 35px;
+  padding: 2px 4px;
+  margin: 0 auto;
+  width: 50%;
+  margin-top: 10%;
+  text-align: center;
+  border-radius: 4px;
+}
+

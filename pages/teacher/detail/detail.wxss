@@ -1,0 +1,134 @@
+::-webkit-scrollbar
+{
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+.header
+{
+  background: #c4e2d8;
+  width: 100%;
+  height: 25vh;
+  position: relative;
+}
+.background
+{
+  background: #c4e2d8;
+  width: 100%;
+  height: 100%;
+}
+.overflow
+{
+  position: absolute;
+  width: 100%;
+  top:10%;
+  left: 0;
+  z-index: 100;
+  text-align: center;
+}
+.avatar
+{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.username
+{
+  font-size: 14px;
+  margin: 5px 0
+}
+.identity
+{
+  display: inline-block;
+  border: 1px solid#e9aa14;
+  color: #e9aa14;
+  padding: 4px 8px;
+  font-size: 12px;
+  margin-right: 5%;
+  border-radius: 4px;
+}
+.getlook
+{
+  display: inline-block;
+  border:1px solid#2ca879;
+  color: #2ca879;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+.item1display
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #000;
+  padding: 2px 0 ;
+}
+.item1
+{
+  width: 28%;
+  color: #999;
+}
+.secondfloor
+{
+  padding: 10px;
+  font-size: 14px;
+  background: #fff;
+  margin-top: 10px;
+}
+.headertext
+{
+  color: #000;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.introduce
+{
+  max-height: 100px;
+  overflow-y: scroll;
+}
+.listsub
+{
+  display: inline-block;
+  border:1px solid#2ca879;
+  color: #2ca879;
+  padding: 2px 4px;
+  margin-left: 6px;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+.bottom
+{
+  position: fixed;
+  bottom: 0%;
+  left: 0;
+  width: 100%;
+  background: #fafafa;
+  z-index: 100;
+}
+.bottomitem
+{
+  float: left;
+  width: calc(25% - 20px);
+  text-align: center;
+  padding: 8px 10px 12px;
+  height: 35px;
+}
+.bottomitem1
+{
+  float: left;
+  width: calc(25% - 20px);
+  text-align: center;
+  padding: 8px 10px 12px;
+  background: #ffcc00;
+  color: #fff;
+  font-weight: bold;
+  line-height: 35px;
+  height: 35px;
+  font-size: 16px;
+}
+.icon3{
+  color:#000;
+  font-size:25px;
+}

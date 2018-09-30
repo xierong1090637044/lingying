@@ -1,0 +1,41 @@
+.listitem
+{
+  display: flex;
+  align-items: center;
+  padding: 10px 0 10px ;
+  border-bottom: 1px solid#999;
+  border-bottom-style: dotted
+}
+.picker
+{
+  display: inline-block;
+  margin: 0 10px 0 0;
+}
+.maincontent
+{
+  padding: 10px;
+  font-size: 16px;
+}
+.notice
+{
+  color: #999
+}
+.submit
+{
+  width: 40%;
+  padding: 8px 5px;
+  background: #2ca879;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  margin: 0 auto;
+  margin-top: 20%;
+  border-radius: 4px;
+}
+.notice1
+{
+  text-align: center;
+  color:darkorange;
+  margin-top: 20%;
+  font-size: 16px;
+}

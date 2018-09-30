@@ -1,0 +1,27 @@
+<view class='allcontent'>
+   <image src='{{detail.parent.avatar}}' class='avatar'></image>
+   <view class='username'>{{detail.parent.username}}</view>
+   <view class='second'>
+     <text class='one'>家教信息</text>
+     <text class='two'>可教：{{detail.can_teach_city}}</text>
+     <text class='two'>薪资：{{detail.pay}}</text>
+   </view>
+
+   <view class='second'>
+     <text class='one'>可教年级</text>
+     <text class='three' wx:for="{{detail.can_teach_class}}" wx:key="{{index}}">{{item}}</text>
+   </view>
+
+   <view class='second'>
+     <text class='one'>可教科目</text>
+     <text class='three' wx:for="{{detail.can_teach}}" wx:key="{{index}}">{{item}}</text>
+   </view>
+
+   <view class='bottom'>
+     <image src='{{codeimg}}' class='codeimg'></image>
+     <view class='notice'>领英家教</view>
+     <view class='notice1'>我们全力为您服务<i class="icon iconfont icon-shouye1" style="margin-left:8px;color:#e9144b;font-weight:bold"></i></view>
+   </view>
+</view>
+
+<view class='notice3'>请暂时截屏保存进行分享</view>

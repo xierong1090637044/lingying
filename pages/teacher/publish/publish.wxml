@@ -1,0 +1,127 @@
+<view class='MainContent'>
+  <form bindsubmit="formSubmit">
+  <view>
+    <view class='title'>基本信息</view>
+
+    <view class='item'>
+    <view>就读大学：</view>
+      <view>
+        <input placeholder='学校名称' name="schoolname"></input>
+      </view>
+    </view>
+
+    <view class='item'>
+    <view>目前身份：</view>
+      <view style='display:flex'>
+      <view>
+          <picker bindchange="pickclass" value="{{class1[class_index]}}" range="{{class1}}" name="class1">
+            {{class1[class_index]}}
+            <i class="icon iconfont icon-xiangxia1" style="margin:0 8px;font-size:14px"></i>
+          </picker>
+        </view>
+        <view><input placeholder='年级（例如大一...）' name="class2"></input></view>
+      </view>
+    </view>
+
+    <view class='item'>
+    <view>所学专业：</view>
+      <view>
+        <input placeholder='所学专业' name="profession"></input>
+      </view>
+    </view>
+
+    
+    <view class='item'>
+    <view>您的性别：</view>
+      <view>
+        <picker bindchange="picktsex" value="{{sex[sex_index]}}" range="{{sex}}" name="sex">
+          {{sex[sex_index]}}
+          <i class="icon iconfont icon-xiangxia1" style="margin-left:8px;font-size:14px"></i>
+        </picker>
+      </view>
+    </view>
+
+    <view class='item'>
+    <view>期望薪资：</view>
+      <view style='display:flex'>
+        <view style='width:60px'><input placeholder='薪资' name="pay" type='number' maxlength='3'></input></view>
+        <view style='line-height:1.4rem;'>/小时</view>
+      </view>
+    </view>
+
+  </view>
+
+  <view>
+    <view class='title'>详细信息</view>
+    
+    <view class='item'>
+    <view>可教城市：</view>
+      <view>
+        <picker bindchange="pickcity" value="{{city[city_index]}}" range="{{city}}" name="can_teacher_city">
+          {{city[city_index]}}
+          <i class="icon iconfont icon-xiangxia1" style="margin-left:8px;font-size:14px"></i>
+        </picker>
+      </view>
+    </view>
+
+    <view class='item'>
+    <view>可教年级：</view>
+      <view>
+        <checkbox-group bindchange="checkboxChange" name="can_teacher_class">
+          <label class="checkbox" wx:for="{{items}}" wx:key="{{index}}">
+            <checkbox value="{{item.value}}" checked="{{item.checked}}"/>{{item.value}}
+          </label>
+        </checkbox-group>
+      </view>
+    </view>
+
+    <view class='item'>
+    <view >可教科目：</view>
+      <view style='width:calc(100% - 80px);font-size:14px;line-height:20px'>
+        <checkbox-group bindchange="can_teacher" name="can_teacher_subject">
+          <label class="checkbox" wx:for="{{subjects}}" wx:key="{{index}}">
+            <checkbox value="{{item}}"/>{{item}}
+          </label>
+        </checkbox-group>
+      </view>
+    </view>
+
+    <view class='item'>
+    <view>自我描述：</view>
+      <view>
+        <textarea placeholder='简单介绍下自己' name="introduce" maxlength='100'auto-height="true"></textarea>
+      </view>
+    </view>
+
+    <view class='item'>
+    <view>家教经验：</view>
+      <view>
+        <textarea placeholder='家教经验（可不填）' name="expire" maxlength='100'auto-height="true"></textarea>
+      </view>
+    </view>
+
+    <view class='item'>
+    <view>所获证书：</view>
+      <view>
+        <textarea placeholder='获得的证书（可不填）' name="award" maxlength='100'auto-height="true"></textarea>
+      </view>
+    </view>
+
+    <view class='item'>
+    <view>辅导方式：</view>
+      <view style='width:calc(100% - 80px);font-size:14px'>
+        <checkbox-group bindchange="byway" name="byway">
+          <label class="checkbox" wx:for="{{ways}}" wx:key="{{index}}">
+            <checkbox value="{{item.value}}" checked="{{item.checked}}"/>{{item.value}}
+          </label>
+        </checkbox-group>
+      </view>
+    </view>
+
+  </view>
+  <view class="btn-area">
+    <button formType="submit" disabled='{{disabled}}'>发布</button>
+  </view>
+
+</form>
+</view>

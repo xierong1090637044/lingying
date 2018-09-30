@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/teacher/teacher",
+    "pages/personcenter/personcenter",
+    
+    "pages/student/student",
+    "pages/personcenter/teacher_identify/teacher_identify",
+    "pages/personcenter/about_us/about_us",
+    "pages/student/detail/detail",
+    "pages/teacher/detail/detail",
+    "pages/teacher/share/share",
+    "pages/personcenter/parent_identify/parent_identify",
+    "pages/student/publish/publish",
+    "pages/teacher/publish/publish",
+    "pages/personcenter/teacher_edit/teacher_edit",
+    "pages/personcenter/parent_edit/parent_edit",
+    "pages/personcenter/myorder/myorder"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "领英家教",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#fff",
+    "backgroundColor": "#bba059",
+    "borderStyle": "black",
+    "list": [
+      {
+        "iconPath": "img/tiku.png",
+        "selectedIconPath": "img/tiku.png",
+        "pagePath": "pages/student/student",
+        "text": "找学生"
+      },
+      {
+        "iconPath": "img/teacher.png",
+        "selectedIconPath": "img/teacher.png",
+        "pagePath": "pages/teacher/teacher",
+        "text": "找老师"
+      },
+      {
+        "iconPath": "img/person.png",
+        "selectedIconPath": "img/person.png",
+        "pagePath": "pages/personcenter/personcenter",
+        "text": "个人中心"
+      }
+    ]
+  }
+}

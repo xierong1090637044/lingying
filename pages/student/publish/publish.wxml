@@ -1,0 +1,106 @@
+<view class='MainContent'>
+  <form bindsubmit="formSubmit">
+  <view>
+    <view class='title'>展示信息</view>
+
+    <view class='item'>
+    <view>求教科目：</view>
+      <view>
+        <input placeholder='年级+科目名称' name="subject"></input>
+      </view>
+    </view>
+
+    <view class='item'>
+    <view>孩子性别：</view>
+      <view>
+        <picker bindchange="bindPickerChange" value="{{sex[index1]}}" range="{{sex}}" name="sex">
+          {{sex[index1]}}
+          <i class="icon iconfont icon-xiangxia1" style="margin-left:8px;font-size:14px"></i>
+        </picker>
+      </view>
+    </view>
+
+    <view class='item'>
+    <view>学习情况：</view>
+      <view>
+        <textarea placeholder='主要为薄弱科目' name="introduce" maxlength='100'auto-height="true"></textarea>
+      </view>
+    </view>
+
+    <view class='item'>
+    <view>上课地点：</view>
+      <view style='display:flex'>
+      <view>
+          <picker bindchange="pickcity" value="{{city[index2]}}" range="{{city}}" name="city">
+            {{city[index2]}}
+            <i class="icon iconfont icon-xiangxia1" style="margin:0 8px;font-size:14px"></i>
+          </picker>
+        </view>
+        <view><input placeholder='上课地点' name="address"></input></view>
+      </view>
+    </view>
+
+    <view class='item'>
+    <view>预估薪资：</view>
+      <view style='display:flex'>
+        <view style='width:60px'><input placeholder='薪资' name="pay" type='number' maxlength='3'></input></view>
+        <view style='line-height:1.4rem;'>/小时</view>
+      </view>
+    </view>
+  </view>
+
+  <view>
+    <view class='title'>详细信息</view>
+
+    <view class='item'>
+    <view>孩子年级：</view>
+      <view>
+        <picker bindchange="pickclass" value="{{class1[class_index]}}" range="{{class1}}" name="class">
+          {{class1[class_index]}}
+          <i class="icon iconfont icon-xiangxia1" style="margin-left:8px;font-size:14px"></i>
+        </picker>
+      </view>
+    </view>
+
+    <view class='item'>
+    <view>教员性别：</view>
+      <view>
+        <picker bindchange="picktsex" value="{{sex[t_sex_index]}}" range="{{sex}}" name="t_sex">
+          {{sex[t_sex_index]}}
+          <i class="icon iconfont icon-xiangxia1" style="margin-left:8px;font-size:14px"></i>
+        </picker>
+      </view>
+    </view>
+
+    <view class='item'>
+    <view>教员要求：</view>
+      <view>
+        <textarea placeholder='对教员的要求' name="require" maxlength='100'auto-height="true"></textarea>
+      </view>
+    </view>
+
+    <view class='item'>
+    <view>上课时间：</view>
+      <view>
+        <input placeholder='希望上课时间' name="course_time" maxlength='20'></input>
+      </view>
+    </view>
+
+    <view class='item'>
+    <view>身份要求：</view>
+      <view>
+        <picker bindchange="pickaptitude" value="{{aptitude[aptitude_index]}}" range="{{aptitude}}" name="aptitude">
+          {{aptitude[aptitude_index]}}
+          <i class="icon iconfont icon-xiangxia1" style="margin-left:8px;font-size:14px"></i>
+        </picker>
+      </view>
+    </view>
+
+  </view>
+
+  <view class="btn-area">
+    <button formType="submit" disabled='{{disabled}}'>发布</button>
+  </view>
+
+</form>
+</view>

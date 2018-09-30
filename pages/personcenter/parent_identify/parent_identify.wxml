@@ -1,0 +1,54 @@
+<view class='maincontent'>
+ <form bindsubmit="formSubmit" bindreset="formReset">
+  <view class='listitem'>
+     <view class='notice'>辅导方式：</view>
+     <view>
+     <radio-group class="radio-group" bindchange="radioChange" name="checkbox">
+       <label class="radio" wx:for="{{items}}" wx:key="{{index}}">
+        <radio value="{{item.value}}" checked="{{item.checked}}" color='#2ca879' disabled='{{disabled}}'/>{{item.value}}
+       </label>
+     </radio-group>
+     </view>
+  </view>
+  <view class='listitem'>
+    <view class='notice'>您的姓名：</view>
+    <view>
+      <input class='name' placeholder='您的姓名' type='text' name="inputname" maxlength='6' disabled='{{disabled}}'></input>
+    </view>
+  </view>
+
+  <view class='listitem'>
+    <view class='notice'>联系方式：</view>
+    <view>
+      <input class='phone' type='number' name="inputmob" maxlength='length' disabled='false'  value='{{phone}}' bindtap='inputmob' wx:if="{{phone =='' || phone ==null}}" placeholder='手机号码'></input>
+      <input class='phone' type='number' name="inputmob" maxlength='length' disabled='false'  value='{{phone}}' wx:else></input>
+    </view>
+  </view>
+
+  
+  <view class='listitem'>
+    <view class='notice'>辅导科目：</view>
+    <view>
+    <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}" name="pickclass" disabled='{{disabled}}'>
+    <view>
+      <view class='picker'>
+        <text>{{multiArray[0][multiIndex[0]]}}</text>
+        <i class="icon iconfont icon-xiangxia1" style="margin-left:8px;font-size:14px"></i>
+      </view>
+      <view class='picker'>
+        <text>{{multiArray[1][multiIndex[1]]}}</text>
+        <i class="icon iconfont icon-xiangxia1" style="margin-left:8px;font-size:14px"></i>
+      </view>
+    </view>
+  </picker>
+  </view>
+  </view>
+
+  <view class="submit" style='display:{{display1}}'>
+    <button formType="submit">提交</button>
+  </view>
+
+  <view class="notice1" style='display:{{display2}}'>正在审核中</view>
+
+ </form>
+</view>

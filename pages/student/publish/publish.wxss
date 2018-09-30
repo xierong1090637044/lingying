@@ -1,0 +1,43 @@
+textarea {
+width: 60vw;
+max-height:150px;
+height:1.1rem;
+display:block;
+position:relative;
+}
+
+.MainContent
+{
+  padding: 5px 15px 5px;
+  background: #fff;
+  font-size: 16px;
+}
+.title
+{
+  color: #ffcc00;
+  font-weight: bold;
+  line-height: 40px;
+  font-size: 18px;
+  text-align: center;
+}
+.item
+{
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid#999;
+  border-bottom-style: dashed;
+  margin-bottom: 10px;
+  padding: 5px 0;
+}
+.btn-area
+{
+  width: 40%;
+  background: #2ca879;
+  color: #fff;
+  margin: 0 auto;
+  line-height: 40px;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}

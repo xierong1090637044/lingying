@@ -1,0 +1,34 @@
+<view class='maincontent'>
+  <view class='noticetext'>
+    <i class="icon iconfont icon-tip icon1"></i>
+    请上传身份证正面图 
+  </view>
+  <view class='imgview' wx:if="{{src1 !=''}}">
+     <i class="icon iconfont icon-shangchuan iconup" style="display:{{display1}}"></i>
+     <image src='{{src1}}' style="display:{{display2}}" class='img1'></image>
+  </view>
+  <view class='imgview' bindtap='uoloadsfz' wx:else>
+     <i class="icon iconfont icon-shangchuan iconup" style="display:{{display1}}"></i>
+     <image src='{{src1}}' style="display:{{display2}}" class='img1'></image>
+  </view>
+  <view class='border'></view>
+
+   <view class='noticetext'>
+    <i class="icon iconfont icon-tip icon1"></i>
+    请上传学生证正面图 
+  </view>
+  <view class='imgview' wx:if="{{src2 != ''}}">
+     <i class="icon iconfont icon-shangchuan iconup" style="display:{{display3}}"></i>
+     <image src='{{src2}}' style="display:{{display4}}" class='img1'></image>
+  </view>
+  <view class='imgview' bindtap='uoloadxsz' wx:else>
+     <i class="icon iconfont icon-shangchuan iconup" style="display:{{display3}}"></i>
+     <image src='{{src2}}' style="display:{{display4}}" class='img1'></image>
+  </view>
+
+  <view class='button' bindtap='upload' style='display:{{button}}'> 提交</view>
+  <view class='notice' style='display:{{notice}}'> 正在审核中</view>
+  <view class='notice2' style='display:{{notice2}}'> 已认证</view>
+
+  <view class='notice1'>（您的资料我们会妥善保管，绝不外泄）</view>
+</view>

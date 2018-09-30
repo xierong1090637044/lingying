@@ -1,0 +1,82 @@
+
+.content
+{
+  height: 100vh;
+  background-color:#c4e2d8;
+}
+.bacimage
+{
+  width: 100vw;
+  height: 30vh;
+}
+.textjs
+{
+  text-align: center;
+  font-size: 12px;
+  line-height: 20px;
+  width: 80%;
+  margin: 0 auto;
+  border: 2px solid#fff;
+  border-radius: 4px;
+  padding-bottom: 10px;
+  margin-top: 5px;
+}
+.mxicon
+{
+  width: 8vw;
+  height: 8vw;
+  border-radius: 50%;
+  background: #fff;
+  line-height: 8vw;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.icon
+{
+  font-size: 20px;
+  color: #0986d5;
+}
+.avatar
+{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  float: left;
+  border:1px solid#fff;
+}
+.icon1
+{
+  font-size: 35px;
+  color: #0986d5;
+}
+.yqicon
+{
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  float: left;
+  text-align: center;
+  margin: 0px 10px;
+}
+.avatar1
+{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  float: left;
+  margin-left: calc(50% - 70px);
+  border:1px solid#fff;
+}
+.thirdfloor
+{
+  width: 100%;
+  margin-top: 35%;
+  border-top: 2px solid#fff;
+  text-align: center;
+}
+.lxwmicon
+{
+  display: inline-block;
+  margin-top: 10px;
+}
