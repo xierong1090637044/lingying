@@ -180,6 +180,6 @@ Page({
   hidden:function()
   {
     that.setData({ maskdisplay: "none" })
-  };
+  },
 
 })
