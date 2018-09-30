@@ -86,3 +86,18 @@
     <button style='display:{{display4}}' bindtap='modify'>修改</button>
   </view>
 </view>
+
+<view class='bottonview'>
+  <view>
+      <view style='color:#999'>入驻老师</view>
+      <view style='margin-top:5px'>{{teachernum}}</view>
+  </view>
+  <view>
+      <view style='color:#999'>入驻学生</view>
+      <view style='margin-top:5px'>{{studentnum}}</view>
+  </view>
+  <view>
+      <view style='color:#999'>驻点城市</view>
+      <view style='margin-top:5px'>1</view>
+  </view>
+</view>

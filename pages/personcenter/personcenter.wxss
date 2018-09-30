@@ -138,3 +138,16 @@ page{
   border-radius: 4px;
 }
 
+.bottonview
+{
+  width: calc(100% - 20px);
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10%;
+  font-size: 16px;
+  float: left;
+  background: #efefef;
+  padding: 10px;
+  border-radius: 4px;
+}
+

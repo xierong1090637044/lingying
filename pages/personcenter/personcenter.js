@@ -14,6 +14,8 @@ Page({
     mask:"none",
     user:"",
     phone: "",
+    teachernum:"",
+    studentnum:""
   },
 
   /*** 生命周期函数--监听页面加载*/
@@ -66,7 +68,23 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    that.onLoad()
+    that.onLoad();
+
+    const query = Bmob.Query("_User");
+    query.equalTo("identity", "==", "大学生/毕业生");
+    query.find().then(res => {
+      that.setData({
+        teachernum:res.length
+      })
+    });
+
+    const query1 = Bmob.Query("_User");
+    query1.equalTo("identity", "==", "家长");
+    query1.find().then(res => {
+      that.setData({
+        studentnum: res.length
+      })
+    });
   },
 
   //获取用户信息
