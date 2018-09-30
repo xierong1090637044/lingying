@@ -17,11 +17,14 @@ Page({
     pay:null,
     city:null,
     identify:null,
+    limit:20,
   },
 
   /*** 生命周期函数--监听页面加载*/
   onLoad: function (options) {
     that = this;
+    that.getallteacherwithloading(that.data.pay, that.data.city, that.data.identify, that.data.limit);
+    that.getpublishbutton();
   },
 
   /*** 生命周期函数--监听页面初次渲染完成*/
@@ -31,8 +34,12 @@ Page({
 
   /*** 生命周期函数--监听页面显示*/
   onShow: function () {
-    that.getallteacher(that.data.pay, that.data.city, that.data.identify);
-    that.getpublishbutton();
+    
+  },
+
+  onHide:function()
+  {
+    that.getallteacher(that.data.pay, that.data.city, that.data.identify, that.data.limit);
   },
 
   //点击去到详情页面
@@ -46,25 +53,49 @@ Page({
   },
 
   //得到所有老师列表
-  getallteacher:function(pay,city,identify)
+  getallteacher:function(pay,city,identify,limit)
   {
+      const query = Bmob.Query("teacher");
+      if (pay != null) query.equalTo("pay", "<=", pay);
+      if (city != null) query.equalTo("can_teach_city", "==", city);
+      if (identify != null) query.equalTo("identify", "==", identify);
+      query.include("parent", "_User");
+      query.order("-createdAt");
+      query.limit(limit);
+      query.find().then(res => {
+        that.setData({
+          detail: res
+        })
+        console.log(res)
+      });
+    },
+
+  //得到所有老师列表
+  getallteacherwithloading: function (pay, city, identify, limit) {
     wx.showLoading({
-      title: '加载中',
-      success:function(){
-        const query = Bmob.Query("teacher");
-        if (pay != null) query.equalTo("pay", "<=", pay);
-        if (city != null) query.equalTo("can_teach_city", "==", city);
-        if (identify != null) query.equalTo("identify", "==", identify);
-        query.include("parent", "_User");
-        query.find().then(res => {
-          wx.hideLoading();
-          that.setData({
-            detail: res
-          })
-          console.log(res)
-        });
-      }
-    })
+      title: '记载中',
+    });
+    const query = Bmob.Query("teacher");
+    if (pay != null) query.equalTo("pay", "<=", pay);
+    if (city != null) query.equalTo("can_teach_city", "==", city);
+    if (identify != null) query.equalTo("identify", "==", identify);
+    query.include("parent", "_User");
+    query.order("-createdAt");
+    query.limit(limit);
+    query.find().then(res => {
+      wx.hideLoading();
+      that.setData({
+        detail: res
+      })
+      console.log(res)
+    });
+  },
+
+    //下滑刷新
+  skiplimit:function()
+  {
+    that.data.limit = that.data.limit+20;
+    that.getallteacherwithloading(that.data.pay, that.data.city, that.data.identify, that.data.limit)
   },
 
   //薪水选择
@@ -76,13 +107,13 @@ Page({
         index1: null,
         index2: null,
       });
-      that.getallteacher();
+      that.getallteacher(null, null, null, that.data.limit);
     } else {
       this.setData({
         index: index,
         pay: that.data.array[index].value
       });
-      that.getallteacher(that.data.array[index].value, that.data.city, that.data.identify);
+      that.getallteacher(that.data.array[index].value, that.data.city, that.data.identify, that.data.limit);
     }
   },
 
@@ -95,14 +126,14 @@ Page({
         index1: null,
         index2: null,
       });
-      that.getallteacher();
+      that.getallteacher(null, null, null, that.data.limit);
     } else {
       this.setData({
         index1: index,
         city: that.data.array1[index]
       });
       console.log(that.data.array1[index]);
-      that.getallteacher(that.data.pay, that.data.array1[index], that.data.identify);
+      that.getallteacher(that.data.pay, that.data.array1[index], that.data.identify, that.data.limit);
     }
   },
 
@@ -116,21 +147,18 @@ Page({
         index1: null,
         index2: null,
       });
-      that.getallteacher();
+      that.getallteacher(null, null, null, that.data.limit);
     }else{
       this.setData({
         index2: index,
         identify: that.data.array2[index]
       });
-      that.getallteacher(that.data.pay, that.data.city, that.data.array2[index]);
+      that.getallteacher(that.data.pay, that.data.city, that.data.array2[index], that.data.limit);
     }
   },
 
   //发布按钮点击
   publish: function () {
-    wx.showLoading({
-      title: '加载中',
-    });
 
     let user = Bmob.User.current();
     let id = user.objectId;
@@ -140,12 +168,10 @@ Page({
         title: '您的身份不符合',
         icon: "none"
       });
-      wx.hideLoading();
     } else {
       const query = Bmob.Query("teacher");
       query.equalTo("parent", "==", id);
       query.find().then(res => {
-        wx.hideLoading();
         console.log(res)
         var lenght = res.length;
         if (lenght >= 1) {
@@ -153,9 +179,7 @@ Page({
             title: '您已发布，请去修改',
             icon: "none"
           });
-
         } else {
-
           wx.navigateTo({
             url: 'publish/publish',
           })

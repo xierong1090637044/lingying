@@ -39,7 +39,7 @@
 </view>
 
 <!--*内容展示*-->
-<scroll-view scroll-y class='scrollview'>
+<scroll-view scroll-y class='scrollview' bindscrolltolower="addskip" lower-threshold="50">
 <view wx:if="{{studentinfo.length==0}}" style='text-align:center'>
      <view style='margin:5% 0'><i class="icon iconfont icon-kulian1 icon-none"></i></view>
      <view style='font-size:16px'>没有数据</view>

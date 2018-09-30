@@ -42,7 +42,7 @@
 </view>
 
 <!--*内容展示*-->
-<scroll-view scroll-y="true" class='scrollview'>
+<scroll-view scroll-y="true" class='scrollview' bindscrolltolower="skiplimit">
   <view wx:if="{{detail.length==0}}" style='text-align:center'>
      <view style='margin:5% 0'><i class="icon iconfont icon-kulian1 icon-none"></i></view>
      <view style='font-size:16px'>没有数据</view>

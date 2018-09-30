@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/teacher/teacher",
-    "pages/personcenter/personcenter",
     
+    "pages/teacher/teacher",
     "pages/student/student",
+    "pages/personcenter/personcenter",
     "pages/personcenter/teacher_identify/teacher_identify",
     "pages/personcenter/about_us/about_us",
     "pages/student/detail/detail",

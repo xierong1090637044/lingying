@@ -10,16 +10,23 @@ Page({
     publishbutton:"none",
     clas:null,
     city:null,
+    limit:20,
   },
 
   onLoad: function () {
     that=this;
     that.getpublishbutton();
     that.getlocation();
+    that.getstudentinfowithloading(that.data.city, that.data.clas, that.data.limit);
   },
 
   onShow:function() {
-    that.getstudentinfo(that.data.city,that.data.clas);
+    
+  },
+
+  onHide:function()
+  {
+    that.getstudentinfo(that.data.city, that.data.clas, that.data.limit);
   },
 
   //选择年级
@@ -34,13 +41,13 @@ Page({
         clas : null,
         city: null,
       })
-      that.getstudentinfo();
+      that.getstudentinfo(null, null, that.data.limit);
     }else{
       this.setData({
         index1: index,
         clas: that.data.array1[index]
       })
-      that.getstudentinfo(that.data.city, that.data.array1[index]);
+      that.getstudentinfo(that.data.city, that.data.array1[index], that.data.limit);
     }
   },
 
@@ -56,34 +63,58 @@ Page({
         city: null,
         clas: null,
       })
-      that.getstudentinfo();
+      that.getstudentinfo(null, null, that.data.limit);
     }else{
       this.setData({
         index: index,
         city: this.data.array[index],
       })
-      that.getstudentinfo(this.data.array[index], that.data.clas);
+      that.getstudentinfo(this.data.array[index], that.data.clas, that.data.limit);
     }
   },
 
   //查询获得所有学生信息
-  getstudentinfo:function(city,clas)
+  getstudentinfo:function(city,clas,limit)
   {
+      const query = Bmob.Query("student");
+      if(city != null ) query.equalTo("city", "==", city);
+      if (clas != null) query.equalTo("class", "==", clas);
+      query.order("-createdAt");
+      query.limit(limit);
+      query.find().then(res => {
+        that.setData({
+          studentinfo: res
+        })
+        console.log(res)
+      });
+  },
+
+  //查询获得所有学生信息带刷新显示
+  getstudentinfowithloading: function (city, clas, limit) {
     wx.showLoading({
-      title: '加载中',
-      success:function(){
-        const query = Bmob.Query("student");
-        if(city != null ) query.equalTo("city", "==", city);
-        if (clas != null) query.equalTo("class", "==", clas);
-        query.find().then(res => {
-          wx.hideLoading();
-          that.setData({
-            studentinfo: res
-          })
-          console.log(res)
-        });
-      }
-    })
+      title: '记载中',
+    });
+    const query = Bmob.Query("student");
+    if (city != null) query.equalTo("city", "==", city);
+    if (clas != null) query.equalTo("class", "==", clas);
+    query.order("-createdAt");
+    query.limit(limit);
+    query.find().then(res => {
+      console.log(res);
+      wx.hideLoading();
+      that.setData({
+        length:res.length,
+        studentinfo: res
+      })
+    });
+  },
+
+  //向下滚动事件
+  addskip:function()
+  {
+    console.log(that.data.limit);
+    that.data.limit = that.data.limit + 20;
+    that.getstudentinfowithloading(that.data.city, that.data.clas, that.data.limit);
   },
 
   //加载得到当前位置信息
@@ -100,9 +131,7 @@ Page({
                 longitude: res.longitude,
               },
               success: function (res) {
-                that.getstudentinfo(res.result.address_component.city);
                 that.setData({
-                  city: res.result.address_component.city,
                   localtion: res.result.address_component.city
                 })
               },
