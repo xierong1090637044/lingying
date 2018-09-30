@@ -21,6 +21,7 @@ Page({
   /*** 生命周期函数--监听页面加载*/
   onLoad: function (options) {
     that = this;
+
     let current = Bmob.User.current();
     console.log(current);
     wx.getSetting({
@@ -68,7 +69,14 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    that.onLoad();
+    let current = Bmob.User.current();
+    Bmob.User.updateStorage(current.objectId).then(res => {
+      that.setData({
+        user: current,
+      })
+    }).catch(err => {
+      console.log(err)
+    });
 
     const query = Bmob.Query("_User");
     query.equalTo("identity", "==", "大学生/毕业生");
@@ -121,7 +129,6 @@ Page({
         icon: "none"
       })
     }else{
-      
       if(user.mobilePhoneNumber ==null ||user.mobilePhoneNumber =="")
       {
         wx.showToast({
@@ -145,7 +152,12 @@ Page({
               }
             }
           })
-        } else {
+        } else if (user.identity == "正在审核"){
+          wx.showToast({
+            title: '正在审核',
+            icon:"none"
+          })
+        }else {
           if (user.identity == "大学生/毕业生" || user.identity == "在职教师") {
             wx.navigateTo({
               url: 'teacher_identify/teacher_identify',

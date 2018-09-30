@@ -10,23 +10,15 @@
 <!--第二部分-->
 <view class='alllist'>
 <!--正在审核显示-->
-<view class="trstyle" wx:if="{{user.identity == '正在审核'}}">
-    <view class='leftitem'>
-      <view class='iconborder color1'><i class="icon iconfont icon-personal-center personicon1"></i></view><text>我的认证</text>
-    </view>
-    <view class='leftitem' style="float:right">
-      <text style='color:#e48618'>正在审核</text>
-      <i class="icon iconfont icon-youbian personicon"></i>
-    </view>
-  </view>
 
-  <view class="trstyle" bindtap='gotoidentify' wx:else>
+  <view class="trstyle" bindtap='gotoidentify'>
     <view class='leftitem'>
       <view class='iconborder color1'><i class="icon iconfont icon-personal-center personicon1"></i></view><text>我的认证</text>
     </view>
     <view class='leftitem' style="float:right">
       <text wx:if="{{user.identity == null ||user.identity == ''}}" style='color:#999'>去认证</text>
       <text wx:elif="{{user.identity =='未通过'}}"style='color:#ee1111'>未通过</text>
+      <text wx:elif="{{user.identity =='正在审核'}}" style='color:#e48618'>正在审核</text>
       <text wx:else>已认证</text>
       <i class="icon iconfont icon-youbian personicon"></i>
     </view>
