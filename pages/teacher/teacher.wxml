@@ -80,5 +80,5 @@
 
 <!--*发布按钮*-->
 <view bindtap='publish' class='publish' style='display:{{publishbutton}}'>
-  <i class="iconfont icon-fabu icon-publish"></i>
+  <i class="iconfont icon-fabu1 icon-publish"></i>
 </view>

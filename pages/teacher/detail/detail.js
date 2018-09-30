@@ -40,10 +40,14 @@ Page({
 
   getdetail:function(id)
   {
+    wx.showLoading({
+      title: '详情加载中',
+    });
     const query = Bmob.Query('teacher');
     query.include("parent","_User");
     query.get(id).then(res => {
-      console.log(res)
+      console.log(res);
+      wx.hideLoading();
       that.setData({detail:res})
     })
   },

@@ -58,14 +58,14 @@
     </view>
   </view>
 
+  <button open-type='openSetting'>
   <view class="trstyle">
-    <button open-type='openSetting'>
     <view class='leftitem'>
       <view class='iconborder color3'><i class="icon iconfont icon-guanyuwomen1 personicon1"></i></view><text>权限设置</text>
     </view>
     <view class='leftitem' style="float:right"><i class="icon iconfont icon-youbian personicon"></i></view>
-    </button>
   </view>
+  </button>
 
   <view class="trstyle" bindtap='gotoaboutus'>
     <view class='leftitem'>

@@ -7,7 +7,10 @@ Page({
 
   /*** 页面的初始数据*/
   data: {
-    detail:""
+    detail:"",
+    array:["内容不真实","虚假信息","有诈骗嫌疑","其他"],
+    index:0,
+    maskdisplay:"none"
   },
 
   /*** 生命周期函数--监听页面加载*/
@@ -43,11 +46,15 @@ Page({
 
   getdetail:function(id)
   {
+    wx.showLoading({
+      title: '详情加载中',
+    });
     const query = Bmob.Query("studentdetail");
     query.include('student', 'student')
     query.equalTo("student", "==", id);
     query.find().then(res => {
       console.log(res);
+      wx.hideLoading();
       that.setData({ detail: res[0] })
       city = res[0].student.localtion;
     });
@@ -132,6 +139,42 @@ Page({
         })
       }
     }
+  },
+
+  //举报点击
+  jubao:function()
+  {
+    that.setData({ maskdisplay:"block"})
+  },
+
+  pickertext:function(e)
+  {
+    that.setData({index:e.detail.value})
+  },
+
+  formSubmit: function (e) {
+    var text = e.detail.value.text;
+    var anotnertext = e.detail.value.anotnertext;
+
+    const query = Bmob.Query("jubao");
+    query.equalTo("parent", "==", itemid);
+    query.find().then(res => {
+      console.log(res);
+      const pointer = Bmob.Pointer('student');
+      const poiID = pointer.set(itemid);
+
+        const query = Bmob.Query('jubao');
+        query.set("text", text);
+        query.set("anotnertext", anotnertext);
+        query.set("parent", poiID);
+        query.save().then(res => {
+          wx.showToast({
+            title: '感谢您的反馈',
+          });
+          that.setData({ maskdisplay: "none" })
+        })
+      
+    });
   },
 
 })

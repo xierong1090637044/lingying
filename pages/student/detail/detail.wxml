@@ -77,3 +77,21 @@
     </view>
     <view class='bottomitem1' bindtap='call'>申请</view>
   </view>
+
+  <view class='mask' style='display:{{maskdisplay}}'></view>
+  <view class='content' style='display:{{maskdisplay}}'>
+  <form bindsubmit="formSubmit">
+   <view class='picker'>
+     <picker bindchange="pickertext" value="{{array[index]}}" range="{{array}}" name="text">
+        <view>
+          <text>{{array[index]}}</text>
+          <i class="icon iconfont icon-xiangxia1" style="margin-left:8px;font-size:14px"></i>
+        </view>
+      </picker>
+    </view>
+    <view class='textareastyle'>
+       <textarea name="anotnertext" placeholder='*补充说明' class='textarea'></textarea>
+    </view>
+    <button formType="submit" class='submit'>提交</button>
+  </form>
+  </view>

@@ -13,19 +13,20 @@ Page({
   onLoad: function (options) {
     that = this;
     id = options.id;
+    wx.showLoading({
+      title: '加载中',
+    });
     var path = "pages/teacher/detail/detail?id="+id;
-
     let qrData = { path: path, width: 430, type: 1 }
     Bmob.generateCode(qrData).then(function (res) {
       console.log(res);
+      wx.hideLoading();
       that.setData({
         codeimg:res.url
       })
     }).catch(function (err) {
       console.log(err);
     });
-
-
     that.getdetail(id)
   },
 
