@@ -70,17 +70,19 @@
 <view class='mask' style='display:{{mask}}' bindtap='hidden'></view>
 <view class='header' style='display:{{mask}}'>
   <view style='display:{{display3}}'>
+    <view class='modifyphonestyle'>绑定手机</view>
     <view><input type='number' class='inputmob' maxlength='11' placeholder='请输入手机号码' placeholder-style='font-size:16px' bindinput="getphone" value='{{phone}}'></input></view>
     <view class='button'>
       <view ><input type='number' class='inputmob' placeholder='验证码' placeholder-style='font-size:16px' maxlength='6' bindinput="getinputcode"></input></view>
      <view class='getcode'><button bindtap="getcode" disabled='{{getcode_canuse}}' style='background:#2ca879;color:#fff'>{{getcode}}</button></view>
     </view>
-    <button bindtap="confrim_bindmobile" class='confrim_bindmobile'>绑定手机</button>
+    <button bindtap="confrim_bindmobile" class='confrim_bindmobile'>绑定</button>
   </view>
 
   <view style='display:{{display4}}'>
+    <view class='modifyphonestyle'>修改绑定手机</view>
     <view><input type='number' class='inputmob' maxlength='11' value='{{phone}}' disabled='true'></input></view>
-    <button bindtap="modifyphone" class='confrim_bindmobile'>修改绑定手机</button>
+    <button bindtap="modifyphone" class='confrim_bindmobile'>修改</button>
   </view> 
 
 </view>

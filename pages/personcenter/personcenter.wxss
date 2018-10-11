@@ -122,7 +122,8 @@ page{
   left: calc(10% - 20px);
   background: #fafafa;
   z-index: 101;
-  border-radius: 4px
+  border-radius: 4px;
+  top:18%;
 }
 .button
 {
@@ -169,5 +170,14 @@ page{
   height: 40px;
   line-height: 40px;
   margin-top: 25px;
+}
+.modifyphonestyle
+{
+  text-align:left;
+  border-bottom:1px solid#999;
+  margin-bottom:25px;
+  line-height: 30px;
+  font-size: 16px;
+  color: #4d4d4d;
 }
 
