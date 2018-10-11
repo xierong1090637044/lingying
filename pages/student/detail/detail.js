@@ -110,7 +110,7 @@ Page({
                   const poiID = pointer.set(userid);
 
                   const pointer1 = Bmob.Pointer('student');
-                  const poiID1 = pointer1.set(id);
+                  const poiID1 = pointer1.set(itemid);
 
                   const query = Bmob.Query('order');
                   query.set("user", poiID);
