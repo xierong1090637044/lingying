@@ -1,11 +1,10 @@
 // pages/personcenter/personcenter.js
 var Bmob = require('../../utils/Bmob-1.6.2.min.js');
 var that;
+var phoneinput;
+var codeinput;
 Page({
-
-  /**
-   * 页面的初始数据
-   */
+  /*** 页面的初始数据*/
   data: {
     display1:'none',
     display2:'none',
@@ -15,7 +14,8 @@ Page({
     user:"",
     phone: "",
     teachernum:"",
-    studentnum:""
+    studentnum:"",
+    getcode:"发送验证码"
   },
 
   /*** 生命周期函数--监听页面加载*/
@@ -173,6 +173,14 @@ Page({
     }
 },
 
+  modifyphone:function()
+  {
+    that.setData({
+      display3: "block",
+      display4: "none"
+    })
+  },
+
   //我的手机点击
   bindmobile:function()
   {
@@ -203,32 +211,112 @@ Page({
     }
 },
 
-//获取手机号地点击
+//输入手机号input
   getphone: function (e) {
+    phoneinput = e.detail.value;
+  },
+
+//输入验证码input
+  getinputcode:function(e)
+  {
+    codeinput = e.detail.value;
+  },
+
+  //发送验证码点击
+  getcode:function()
+  {
     wx.showLoading({
-      title: '获取中',
+      title: '发送中',
     });
-    let current = Bmob.User.current();
-
-    wx.BaaS.wxDecryptData(e.detail.encryptedData, e.detail.iv, 'phone-number').then(decrytedData => {
-
-      const query = Bmob.Query('_User');
-      query.get(current.objectId).then(res => {
-        res.set('mobilePhoneNumber', decrytedData.phoneNumber);
-        res.save();
-        wx.showToast({
-          title: '获取成功',
-          icon: "none",
-        });
-        wx.hideLoading();
-        that.setData({
-          phone: decrytedData.phoneNumber,
-          display3: "none",
-          display4: "block"
-        });
+    if (phoneinput ==null)
+    {
+      wx.showToast({
+        title: '请填写手机号',
+        icon:"none"
       });
-    }, err => {
-    })
+    }else{
+      let params = {
+        mobilePhoneNumber: phoneinput,
+        template:"领英"
+      };
+      Bmob.requestSmsCode(params).then(function (response) {
+        console.log(response);
+        that.setData({
+          getcode_canuse:true,
+          getcode:60
+        });
+        var Interval = setInterval(function(){
+          that.setData({
+            getcode: that.data.getcode - 1
+          });
+          if(that.data.getcode == 1){
+            that.setData({
+              getcode_canuse: false,
+              getcode: "重发"
+            });
+            clearInterval(Interval)
+          }
+        },1000);
+        wx.hideLoading();
+      }).catch(function (error) {
+           if(error.error != null)
+           {
+             wx.showToast({
+               title: error.error,
+               icon:"none"
+             })
+           }
+        });
+    }
+  },
+
+  //绑定手机点击
+  confrim_bindmobile:function()
+  {
+    if (phoneinput == null || codeinput == null)
+    {
+      wx.showToast({
+        title: '请填写完整',
+        icon:"none"
+      })
+    }else{
+      let smsCode = codeinput
+      let data = {
+        mobilePhoneNumber: phoneinput
+      }
+      Bmob.verifySmsCode(smsCode, data).then(function (response) {
+        console.log(response);
+        if (response.msg =="ok")
+        {
+          let current = Bmob.User.current();
+          const query = Bmob.Query('_User');
+          query.set('id', current.objectId);
+          query.set('mobilePhoneNumber', phoneinput);
+          query.save().then(res => {
+            wx.showToast({
+              title: '绑定成功',
+            });
+            setTimeout(function(){
+              that.hidden();
+            },500)
+          }).catch(err => {
+            console.log(err)
+          })
+        }else{
+          wx.showToast({
+            title: "验证码错误",
+            icon: "none"
+          })
+        }
+      }).catch(function (error) {
+        if (error.error != null) {
+          wx.showToast({
+            title: error.error,
+            icon: "none"
+          })
+        }
+        });
+    }
   },
 
   //修改手机mask点击
@@ -242,10 +330,7 @@ Page({
 
   //修改电话号码点击
   modify: function () {
-    wx.showToast({
-      title: '请联系客服修改',
-      icon:"none"
-    })
+   
   },
 
   //我的发布点击

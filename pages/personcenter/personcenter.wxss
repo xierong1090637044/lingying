@@ -126,16 +126,12 @@ page{
 }
 .button
 {
-  background: #2ca879;
-  color: #fff;
-  line-height: 35px;
-  height: 35px;
-  padding: 2px 4px;
-  margin: 0 auto;
-  width: 50%;
+  line-height: 40px;
   margin-top: 10%;
   text-align: center;
   border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .bottonview
@@ -149,5 +145,29 @@ page{
   background: #efefef;
   padding: 10px;
   border-radius: 4px;
+}
+.getcode
+{
+  font-size: 12px;
+  background-color: #2ca879;
+  padding: 0px 10px;
+  width: 30%;
+  margin: 0 0 0 20px;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.confrim_bindmobile
+{
+  font-size: 16px;
+  background-color: #2ca879;
+  padding: 0px 10px;
+  width: 40%;
+  color: #fff;
+  border-radius: 4px;
+  margin:  0 auto;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 25px;
 }
 
