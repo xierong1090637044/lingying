@@ -1,8 +1,7 @@
 
 .content
 {
-  height: 100vh;
-  background-color:#c4e2d8;
+  background-color:#50d8c0;
 }
 .bacimage
 {

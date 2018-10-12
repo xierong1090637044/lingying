@@ -120,7 +120,7 @@
 
   </view>
   <view class="btn-area">
-    <button formType="submit" disabled='{{disabled}}'>发布</button>
+    <button formType="submit" disabled='{{disabled}}'>修改</button>
   </view>
 
 </form>

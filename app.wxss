@@ -1,6 +1,6 @@
 @import 'iconfont.wxss';
 page{
-  background: #efefef;
+  background: #f6f6f6;
 }
 .personicon
 {

@@ -7,7 +7,7 @@ color: transparent;
 .fristcontent
 {
   padding: 10px;
-  background: #c4e2d8;
+  background: #50d8c0;
   color: #fff;
   font-size: 16px;
 }

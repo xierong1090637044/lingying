@@ -1,8 +1,6 @@
 page{
-  background: #fafafa;
+  background: #f6f6f6;
   text-align: center;
-  padding: 0px 2rem;
-  width: calc(100% - 4rem);
 }
 .loginbutton
 {
@@ -38,12 +36,14 @@ page{
 }
 .trstyle
 {
-  width: 100%;
+  width: calc(100% - 20px);
   text-align: left;
   font-size: 16px;
   line-height: 45px;
-  border-bottom: 1px solid#999;
   float: left;
+  background: #fff;
+  margin-bottom: 5px;
+  padding: 0px 10px;
 }
 .leftitem
 {
@@ -64,9 +64,6 @@ page{
 }
 .alllist
 {
-  padding: 0.5rem;
-  border:1px solid#2ca879;
-  border-radius: 4px;
   float: left;
 }
 .color1
@@ -106,7 +103,7 @@ page{
 }
 .inputmob
 {
-  border: 2px solid#c4e2d8;
+  border: 2px solid#50d8c0;
   border-radius: 4px;
   padding: 5px 0 5px 2px;
   text-align: left;

@@ -23,9 +23,9 @@
   },
   "tabBar": {
     "color": "#000",
-    "selectedColor": "#fff",
-    "backgroundColor": "#bba059",
-    "borderStyle": "black",
+    "selectedColor": "#50d8c0",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
     "list": [
       {
         "iconPath": "img/tiku.png",
