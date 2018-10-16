@@ -4,7 +4,7 @@
    <view class='second'>
      <text class='one'>家教信息</text>
      <text class='two'>可教：{{detail.can_teach_city}}</text>
-     <text class='two'>薪资：{{detail.pay}}</text>
+     <text class='two'>薪资：{{detail.pay}}元/小时</text>
    </view>
 
    <view class='second'>
