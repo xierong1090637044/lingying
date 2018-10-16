@@ -1,10 +1,18 @@
 <!--第一部分-->
-<view style='display:{{display1}}' class='frist'>
+<view style='display:{{display1}};padding-top:5px' class='frist'>
   <button open-type='getUserInfo' class='loginbutton' plain='true' bindgetuserinfo="onGotUserInfo">登录</button>
+  <view class='aboutus' bindtap='gotoaboutus'>
+    <i class="icon iconfont icon-wode icon-aboutus"></i>
+    <text>关于我们</text>
+  </view>
 </view>
 <view style='display:{{display2}}' class='frist'>
   <image src='{{user.avatar}}' class='avatar'></image>
   <view class='name'>{{user.username}}</view>
+  <view class='aboutus' bindtap='gotoaboutus'>
+    <i class="icon iconfont icon-wode icon-aboutus"></i>
+    <text>关于我们</text>
+  </view>
 </view>
 
 <!--第二部分-->
@@ -58,13 +66,6 @@
     <view class='leftitem' style="float:right"><i class="icon iconfont icon-youbian personicon"></i></view>
   </view>
   </button>
-
-  <view class="trstyle" bindtap='gotoaboutus'>
-    <view class='leftitem'>
-      <view class='iconborder color5'><i class="icon iconfont icon-icon- personicon1"></i></view><text>关于我们</text>
-    </view>
-    <view class='leftitem' style="float:right"><i class="icon iconfont icon-youbian personicon"></i></view>
-  </view>
 </view>
 
 <view class='mask' style='display:{{mask}}' bindtap='hidden'></view>
@@ -73,8 +74,8 @@
     <view class='modifyphonestyle'>绑定手机</view>
     <view><input type='number' class='inputmob' maxlength='11' placeholder='请输入手机号码' placeholder-style='font-size:16px' bindinput="getphone" value='{{phone}}'></input></view>
     <view class='button'>
-      <view ><input type='number' class='inputmob' placeholder='验证码' placeholder-style='font-size:16px' maxlength='6' bindinput="getinputcode"></input></view>
-     <view class='getcode'><button bindtap="getcode" disabled='{{getcode_canuse}}' style='background:#2ca879;color:#fff'>{{getcode}}</button></view>
+      <view ><input type='number' class='inputmob' placeholder='验证码' placeholder-style='font-size:16px' maxlength='6' bindinput="getinputcode" style='width:120px'></input></view>
+     <view class='getcode'><button bindtap="getcode" disabled='{{getcode_canuse}}' style='background:#50d8c0;color:#fff'>{{getcode}}</button></view>
     </view>
     <button bindtap="confrim_bindmobile" class='confrim_bindmobile'>绑定</button>
   </view>

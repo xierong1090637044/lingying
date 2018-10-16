@@ -24,7 +24,7 @@
 {
   width: 40%;
   padding: 8px 5px;
-  background: #2ca879;
+  background: #50d8c0;
   color: #fff;
   text-align: center;
   font-size: 16px;

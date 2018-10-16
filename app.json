@@ -1,5 +1,6 @@
 {
   "pages": [
+    
     "pages/teacher/teacher",
     "pages/student/student",
     "pages/personcenter/personcenter",
@@ -28,20 +29,20 @@
     "borderStyle": "white",
     "list": [
       {
-        "iconPath": "img/tiku.png",
-        "selectedIconPath": "img/tiku.png",
+        "iconPath": "img/student.png",
+        "selectedIconPath": "img/student_s.png",
         "pagePath": "pages/student/student",
         "text": "找学生"
       },
       {
         "iconPath": "img/teacher.png",
-        "selectedIconPath": "img/teacher.png",
+        "selectedIconPath": "img/teacher_s.png",
         "pagePath": "pages/teacher/teacher",
         "text": "找老师"
       },
       {
         "iconPath": "img/person.png",
-        "selectedIconPath": "img/person.png",
+        "selectedIconPath": "img/person_s.png",
         "pagePath": "pages/personcenter/personcenter",
         "text": "个人中心"
       }

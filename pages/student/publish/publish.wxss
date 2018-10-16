@@ -14,7 +14,7 @@ position:relative;
 }
 .title
 {
-  color: #ffcc00;
+  color: #50d8c0;
   font-weight: bold;
   line-height: 40px;
   font-size: 18px;
@@ -32,7 +32,7 @@ position:relative;
 .btn-area
 {
   width: 40%;
-  background: #2ca879;
+  background: #50d8c0;
   color: #fff;
   margin: 0 auto;
   line-height: 40px;

@@ -15,12 +15,11 @@ color: transparent;
 {
   display: flex;
   align-items: center;
-  background-color: #fff;
   justify-content:space-between;
   color: #000;
   line-height: 30px;
   font-size: 16px;
-  padding:5px 10px;
+  padding:5px 0px;
   border-bottom: 1px solid#ddd;
 }
 .left
@@ -34,7 +33,7 @@ color: transparent;
 
 .title
 {
-  color: #ffcc00;
+  color: #50d8c0;
   font-weight: bold;
   line-height: 40px;
   font-size: 18px;
@@ -71,7 +70,7 @@ color: transparent;
   width: calc(25% - 20px);
   text-align: center;
   padding: 8px 10px 12px;
-  background: #ffcc00;
+  background: #50d8c0;
   color: #fff;
   font-weight: bold;
   line-height: 35px;
@@ -90,6 +89,8 @@ color: transparent;
 .scrollview
 {
   max-height: calc(100vh - 60px);
+  margin: 0 10px;
+  width: calc(100% - 20px);
 }
 .detailoverflow
 {
@@ -139,7 +140,7 @@ color: transparent;
 }
 .submit
 {
-  background: #2ca879;
+  background: #50d8c0;
   font-size: 16px;
   margin-top: 10px;
   margin-bottom: 10px;

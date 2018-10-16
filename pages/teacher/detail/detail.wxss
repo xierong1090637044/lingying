@@ -8,7 +8,7 @@
 {
   background: #50d8c0;
   width: 100%;
-  height: 25vh;
+  height: 22vh;
   position: relative;
 }
 .background
@@ -90,12 +90,13 @@
 .listsub
 {
   display: inline-block;
-  border:1px solid#2ca879;
-  color: #2ca879;
+  border:1px solid#fff;
+  color: #4d4d4d;
   padding: 2px 4px;
   margin-left: 6px;
   border-radius: 4px;
   margin-bottom: 5px;
+  box-shadow: 0px 0px 10px rgba(80, 216, 192, 0.2);
 }
 
 .bottom
@@ -121,7 +122,7 @@
   width: calc(25% - 20px);
   text-align: center;
   padding: 8px 10px 12px;
-  background: #ffcc00;
+  background: #50d8c0;
   color: #fff;
   font-weight: bold;
   line-height: 35px;
@@ -131,4 +132,26 @@
 .icon3{
   color:#000;
   font-size:25px;
+}
+.by_way
+{
+  border:1px solid#50d8c0;
+  padding: 0 5px;
+  border-radius: 4px;
+}
+.haveidentify
+{
+  position: absolute;
+  right: 0;
+  top:10%;
+  font-size: 12px;
+  background: #ffe101;
+  padding: 5px 0 5px 5px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius:10px;
+}
+.icon-aboutus
+{
+  font-size: 14px;
+  margin-right: 5px;
 }

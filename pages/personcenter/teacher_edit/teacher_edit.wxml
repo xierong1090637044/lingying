@@ -6,7 +6,7 @@
     <view class='item'>
     <view>就读大学：</view>
       <view>
-        <input placeholder='学校名称' name="schoolname" value='{{detail.school}}'></input>
+        <input placeholder='学校名称' name="schoolname" value='{{detail.school}}'style='width:180px'></input>
       </view>
     </view>
 
@@ -19,14 +19,14 @@
             <i class="icon iconfont icon-xiangxia1" style="margin:0 8px;font-size:14px"></i>
           </picker>
         </view>
-        <view><input placeholder='年级（例如大一...）' name="class2" value='{{selectclass1}}'></input></view>
+        <view><input placeholder='年级（例如大一...）' style='width:130px' name="class2" value='{{selectclass1}}'></input></view>
       </view>
     </view>
 
     <view class='item'>
     <view>所学专业：</view>
       <view>
-        <input placeholder='所学专业' name="profession" value="{{detail.major}}"></input>
+        <input placeholder='所学专业' name="profession" value="{{detail.major}}"style='width:180px'></input>
       </view>
     </view>
 

@@ -42,6 +42,18 @@ Page({
     that.getallteacher(that.data.pay, that.data.city, that.data.identify, that.data.limit);
   },
 
+  /*** 用户点击右上角分享*/
+  onShareAppMessage: function (res) {
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(res.target)
+    }
+    return {
+      title: '领英家教',
+      path: '/pages/teacher/teacher'
+    }
+  },
+
   //点击去到详情页面
   gotodetail:function(e)
   {
@@ -73,7 +85,7 @@ Page({
   //得到所有老师列表
   getallteacherwithloading: function (pay, city, identify, limit) {
     wx.showLoading({
-      title: '记载中',
+      title: '加载中',
     });
     const query = Bmob.Query("teacher");
     if (pay != null) query.equalTo("pay", "<=", pay);

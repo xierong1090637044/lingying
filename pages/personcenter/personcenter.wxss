@@ -29,6 +29,8 @@ page{
 .frist
 {
   padding: 0 0 1rem;
+  background: #50d8c0;
+  position: relative;
 }
 .iconborder
 {
@@ -42,8 +44,8 @@ page{
   line-height: 45px;
   float: left;
   background: #fff;
-  margin-bottom: 5px;
   padding: 0px 10px;
+  border-bottom: 1px solid#f6f6f6;
 }
 .leftitem
 {
@@ -68,27 +70,27 @@ page{
 }
 .color1
 {
-  background: #2bcaae;
+  background: #50d8c0;
 }
 .color2
 {
-  background: #cabf49;
+  background: #fc9a30;
 }
 .color3
 {
-  background: #49cab9;
+  background: #7e97fa;
 }
 .color4
 {
-  background: #ad49ca;
+  background: #50d8c0;
 }
 .color5
 {
-  background: #ca4976;
+  background: #fc9a30;
 }
 .color6
 {
-  background: #e514d4
+  background: #31c2fb
 }
 
 .mask
@@ -137,7 +139,7 @@ page{
   width: calc(100% - 20px);
   display: flex;
   justify-content: space-between;
-  margin-top: 10%;
+  margin-top: 20px;
   font-size: 16px;
   float: left;
   background: #efefef;
@@ -147,7 +149,7 @@ page{
 .getcode
 {
   font-size: 12px;
-  background-color: #2ca879;
+  background-color: #50d8c0;
   padding: 0px 10px;
   width: 30%;
   margin: 0 0 0 20px;
@@ -158,7 +160,7 @@ page{
 .confrim_bindmobile
 {
   font-size: 16px;
-  background-color: #2ca879;
+  background-color: #50d8c0;
   padding: 0px 10px;
   width: 40%;
   color: #fff;
@@ -176,5 +178,21 @@ page{
   line-height: 30px;
   font-size: 16px;
   color: #4d4d4d;
+}
+.aboutus
+{
+  position: absolute;
+  right: 0;
+  top:10%;
+  font-size: 12px;
+  background: #ffe101;
+  padding: 5px 0 5px 5px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius:10px;
+}
+.icon-aboutus
+{
+  font-size: 12px;
+  margin-right: 5px;
 }
 

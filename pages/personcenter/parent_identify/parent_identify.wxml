@@ -13,15 +13,15 @@
   <view class='listitem'>
     <view class='notice'>您的姓名：</view>
     <view>
-      <input class='name' placeholder='您的姓名' type='text' name="inputname" maxlength='6' disabled='{{disabled}}'></input>
+      <input class='name' placeholder='您的姓名' type='text' name="inputname" maxlength='6' disabled='{{disabled}}' style='width:180px'></input>
     </view>
   </view>
 
   <view class='listitem'>
     <view class='notice'>联系方式：</view>
     <view>
-      <input class='phone' type='number' name="inputmob" maxlength='length' disabled='false'  value='{{phone}}' bindtap='inputmob' wx:if="{{phone =='' || phone ==null}}" placeholder='手机号码'></input>
-      <input class='phone' type='number' name="inputmob" maxlength='length' disabled='false'  value='{{phone}}' wx:else></input>
+      <input class='phone' type='number' name="inputmob" maxlength='length' disabled='false'  value='{{phone}}' bindtap='inputmob' wx:if="{{phone =='' || phone ==null}}" placeholder='手机号码'style='width:180px'></input>
+      <input class='phone' type='number' name="inputmob" maxlength='length' disabled='false'  style='width:180px' value='{{phone}}' wx:else></input>
     </view>
   </view>
 

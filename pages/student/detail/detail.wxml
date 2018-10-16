@@ -24,7 +24,7 @@
    <view class='left'>详细地址</view>
    <view class='detailoverflow'>
      {{detail.student.localtion}}
-     <i class="iconfont icon-icon" style="font-size:18px;margin-left:5px;color:#2ca879;font-weight:bold"></i>
+     <i class="iconfont icon-didian" style="font-size:18px;margin-left:5px;color:#2ca879;font-weight:bold"></i>
     </view>
   </view>
 

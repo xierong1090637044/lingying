@@ -6,7 +6,7 @@
     <view class='item'>
     <view>求教科目：</view>
       <view>
-        <input placeholder='年级+科目名称' name="subject"></input>
+        <input placeholder='年级+科目名称' name="subject" style='width:180px'></input>
       </view>
     </view>
 
@@ -36,7 +36,7 @@
             <i class="icon iconfont icon-xiangxia1" style="margin:0 8px;font-size:14px"></i>
           </picker>
         </view>
-        <view><input placeholder='上课地点' name="address"></input></view>
+        <view><input placeholder='上课地点' name="address" style='width:125px;max-width:180px'></input></view>
       </view>
     </view>
 
@@ -82,7 +82,7 @@
     <view class='item'>
     <view>上课时间：</view>
       <view>
-        <input placeholder='希望上课时间' name="course_time" maxlength='20'></input>
+        <input placeholder='希望上课时间' name="course_time" maxlength='20' style='width:180px'></input>
       </view>
     </view>
 

@@ -49,18 +49,26 @@ button{
   width: 50px;
   height: 50px;
   line-height: 50px;
-  background: #fff;
   border-radius: 50%;
-  box-shadow: 0 0 20px #1888df;
+  box-shadow: 0 0 20px #50d8c0;
   position: fixed;
   right: 5%;
   bottom: 10%;
+  background: #50d8c0;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
 }
 .icon-publish
 {
-  color: #1888df;
+  color: #50d8c0;
   font-size: 30px;
   font-weight: bold;
   margin-left:5%;
+}
+.appborder
+{
+  border-bottom: 1px solid#cecece;
 }
 

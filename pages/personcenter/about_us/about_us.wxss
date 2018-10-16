@@ -1,81 +1,56 @@
-
-.content
-{
-  background-color:#50d8c0;
-}
-.bacimage
-{
-  width: 100vw;
-  height: 30vh;
-}
-.textjs
-{
-  text-align: center;
-  font-size: 12px;
-  line-height: 20px;
-  width: 80%;
-  margin: 0 auto;
-  border: 2px solid#fff;
-  border-radius: 4px;
-  padding-bottom: 10px;
-  margin-top: 5px;
-}
-.mxicon
-{
-  width: 8vw;
-  height: 8vw;
-  border-radius: 50%;
-  background: #fff;
-  line-height: 8vw;
-  margin: 0 auto;
-  margin-bottom: 10px;
-  margin-top: 10px;
-}
-.icon
-{
-  font-size: 20px;
-  color: #0986d5;
-}
-.avatar
-{
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  float: left;
-  border:1px solid#fff;
-}
-.icon1
-{
-  font-size: 35px;
-  color: #0986d5;
-}
-.yqicon
-{
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  float: left;
-  text-align: center;
-  margin: 0px 10px;
-}
-.avatar1
-{
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  float: left;
-  margin-left: calc(50% - 70px);
-  border:1px solid#fff;
-}
-.thirdfloor
-{
+.main {
   width: 100%;
-  margin-top: 35%;
-  border-top: 2px solid#fff;
+  height: 100%;
+}
+
+.title {
+  height: 25%;
+  width: 100%;
+  background-color: #fff;
+  text-align: center
+}
+
+.image {
+  padding-bottom: 10px;
+}
+
+.image1 {
   text-align: center;
+  padding-top: 10px;
 }
-.lxwmicon
+
+.select
 {
-  display: inline-block;
-  margin-top: 10px;
+  margin: 10px 0 0;
+  padding: 0 15px;
+  background: #fff;
 }
+
+.selectitem
+{
+  display: flex;
+  justify-content: space-between;
+  line-height: 40px;
+  font-size: 16px;
+}
+
+.textareaas
+{
+  width: calc(100vw - 150px);
+  border-radius: 8px;
+  border:1px solid#cecece;
+  padding: 0 5px;
+  line-height:20px;
+
+}
+
+.buttonas
+{
+  background: #50d8c0;
+  color: #fff;
+  padding:0 20px;
+  line-height:28px;
+  margin:10px 0;
+  border-radius: 4px;
+}
+

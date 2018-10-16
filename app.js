@@ -1,6 +1,6 @@
 //app.js
 var Bmob = require('utils/Bmob-1.6.2.min.js');
-Bmob.initialize("fe19a8c030c6dc5440399eddc8d7b028", "e67c942a2cfd9abc81f7358cb46615d9");
+Bmob.initialize("fe19a8c030c6dc5440399eddc8d7b028", "e67c942a2cfd9abc81f7358cb46615d9","b08344302e157680c76af7cde677957f");
 App({
   onLaunch: function () {
     var that=this;

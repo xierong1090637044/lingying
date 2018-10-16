@@ -1,10 +1,10 @@
 <view class='headerstyle'>
-    <image src='http://bmob-cdn-21363.b0.upaiyun.com/2018/10/12/d3ff1b5c403cfb848001c708404aa30b.png' class='headerimg'></image>
+  <image src='http://bmob-cdn-21363.b0.upaiyun.com/2018/10/12/d3ff1b5c403cfb848001c708404aa30b.png' class='headerimg'></image>
 
-<!--*筛选器*-->
-<view class='select'>
-  <view class="section">
-      <picker bindchange="bindPickerChange" value="{{index}}" range-key="name"range="{{array}}">
+  <!--*筛选器*-->
+  <view class='select'>
+    <view class="section">
+      <picker bindchange="bindPickerChange" value="{{index}}" range-key="name" range="{{array}}">
         <view class="picker" wx:if="{{array[index]==null}}">
           <text>期望薪资</text>
           <i class="icon iconfont icon-xiangxia1" style="margin-left:8px;font-size:14px"></i>
@@ -14,8 +14,8 @@
           <i class="icon iconfont icon-xiangxia1" style="margin-left:8px;font-size:14px"></i>
         </view>
       </picker>
-  </view>
-  <view class="section">
+    </view>
+    <view class="section">
       <picker bindchange="bindPickerChange1" value="{{index1}}" range="{{array1}}">
         <view class="picker" wx:if="{{array1[index1]==null}}">
           <text>授课区域</text>
@@ -26,8 +26,8 @@
           <i class="icon iconfont icon-xiangxia1" style="margin-left:8px;font-size:14px"></i>
         </view>
       </picker>
-  </view>
-  <view class="section">
+    </view>
+    <view class="section">
       <picker bindchange="bindPickerChange2" value="{{index2}}" range="{{array2}}">
         <view class="picker" wx:if="{{array2[index2]==null}}">
           <text>教员类型</text>
@@ -38,47 +38,49 @@
           <i class="icon iconfont icon-xiangxia1" style="margin-left:8px;font-size:14px"></i>
         </view>
       </picker>
+    </view>
   </view>
-</view>
 
-<!--*内容展示*-->
-<scroll-view scroll-y="true" class='scrollview' bindscrolltolower="skiplimit">
-  <view wx:if="{{detail.length==0}}" style='text-align:center'>
-     <view style='margin:5% 0'><i class="icon iconfont icon-kulian1 icon-none"></i></view>
-     <view style='font-size:16px'>没有数据</view>
-  </view>
-  <view wx:else>
-  <view wx:for="{{detail}}" wx:key="{{index}}" class='allcontent' data-id='{{item.objectId}}' bindtap='gotodetail'>
-     <view class='alllist'>
-       <view class='imageview'>
-         <image src='{{item.parent.avatar}}' class='image'></image>
-       </view>
-       <view class='contentview'>
-         <view class="onefloor">
-            <text>{{item.parent.username}}</text>
-            <text wx:if="{{item.parent.gender ==1}}">（男）</text>
-            <text wx:else>（女）</text>
-            <text>{{item.class}}</text>
-         </view>
-         <view class="secondfloor">
-            <text>{{item.school}}</text>
-         </view>
-         <view class="secondfloor" style='padding-bottom:5px'>
-            <view class='icontext'>身</view>
-            <text>{{item.parent.identity}}</text>
-            <view class='icontext1'>证</view>
-            <text>已认证</text>
-         </view>
-         <view class="secondfloor introduce">{{item.introduce}}</view>
-       </view>
-     </view>
-  </view>
-  </view>
-</scroll-view>
+  <!--*内容展示*-->
+  <scroll-view scroll-y="true" class='scrollview' bindscrolltolower="skiplimit">
+    <view wx:if="{{detail.length==0}}" style='text-align:center'>
+      <view style='margin:5% 0'>
+        <i class="icon iconfont icon-kulian1 icon-none"></i>
+      </view>
+      <view style='font-size:16px'>没有数据</view>
+    </view>
+    <view wx:else>
+      <view class='headertext'>为你推荐</view>
+      <view wx:for="{{detail}}" wx:key="{{index}}" class='allcontent' data-id='{{item.objectId}}' bindtap='gotodetail'>
+        <view class='alllist'>
+          <view class='imageview'>
+            <image src='{{item.parent.avatar}}' class='image'></image>
+          </view>
+          <view class='contentview'>
+            <view class="onefloor">
+              <text style='margin-right:5px;font-size:14px;'>{{item.parent.username}}</text>
+              <text style='font-size:12px;color:'>( {{item.school}} )</text>
+            </view>
+            <view class="secondfloor">
+              <text class='gender' wx:if="{{item.parent.gender ==1}}">男</text>
+              <text wx:else class='gender'>女</text>
+              <text>{{item.class}}</text>
+            </view>
+            <view class="secondfloor" style='padding-bottom:5px'>
+              <image src="../../img/identify.png" style='width:18px;height:18px;margin-left:10px;'></image>
+              <text style='margin-left:10px;'>{{item.parent.identity}}</text>
+              <text style='margin-left:16px;'>已认证</text>
+            </view>
+          </view>
+          <view class='right'>
+          <image src='../../img/right_t.png' style='width:20px;height:20px;margin-top:30px;margin-right:20px;'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
 </view>
 
 
 <!--*发布按钮*-->
-<view bindtap='publish' class='publish' style='display:{{publishbutton}}'>
-  <i class="iconfont icon-fabu1 icon-publish"></i>
-</view>
+<view bindtap='publish' class='publish' style='display:{{publishbutton}};'>发布</view>

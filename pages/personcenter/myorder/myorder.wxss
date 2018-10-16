@@ -89,7 +89,7 @@
 .call
 {
   margin:1%;
-  background: #2ca879;
+  background: #50d8c0;
   color: #fff;
   font-size: 16px;
   padding: 4px 8px;
