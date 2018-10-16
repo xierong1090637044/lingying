@@ -24,7 +24,7 @@ page{
 }
 .name
 {
-  font-size: 12px;
+  font-size: 16px;
 }
 .frist
 {
@@ -194,5 +194,31 @@ page{
 {
   font-size: 12px;
   margin-right: 5px;
+}
+
+.iocn_edit
+{
+  margin-left: 10px;
+  color: #fff;
+}
+
+.edit_infor_modal
+{
+  padding: 20px;
+  position: fixed;
+  width: 80%;
+  left: calc(10% - 20px);
+  background: #fafafa;
+  z-index: 101;
+  border-radius: 4px;
+  top:18%;
+}
+.inputname
+{
+  font-size: 16px;
+  border-bottom:1px solid#50d8c0;
+  width: 160px;
+  padding: 4px 8px;
+  margin: 0 auto;
 }
 

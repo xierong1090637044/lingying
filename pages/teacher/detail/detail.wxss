@@ -8,7 +8,7 @@
 {
   background: #50d8c0;
   width: 100%;
-  height: 22vh;
+  height: 135px;
   position: relative;
 }
 .background

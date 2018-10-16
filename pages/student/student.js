@@ -204,7 +204,7 @@ Page({
   getpublishbutton:function()
   {
     const query = Bmob.Query('config');
-    query.get('ApBP7779').then(res => {
+    query.get('IvXCGGGH').then(res => {
       if(res.button)
       {
         that.setData({ publishbutton:"block"})

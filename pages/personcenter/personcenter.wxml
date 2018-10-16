@@ -8,7 +8,12 @@
 </view>
 <view style='display:{{display2}}' class='frist'>
   <image src='{{user.avatar}}' class='avatar'></image>
-  <view class='name'>{{user.username}}</view>
+  <view class='name' bindtap='edit_infor'>
+    <view>
+      <text>{{user.username}}</text>
+      <i class="icon iconfont icon-bianji iocn_edit"></i>
+    </view>
+  </view>
   <view class='aboutus' bindtap='gotoaboutus'>
     <i class="icon iconfont icon-wode icon-aboutus"></i>
     <text>关于我们</text>
@@ -101,4 +106,15 @@
       <view style='color:#999'>驻点城市</view>
       <view style='margin-top:5px'>1</view>
   </view>
+</view>
+
+<!--编辑个人信息点击-->
+<view class='mask' style='display:{{mask1}}' bindtap='hidden'></view>
+<view style='display:{{mask1}}' class='edit_infor_modal'>
+   <view>
+     <image src='{{avatar}}' class='avatar' bindtap='modifyavatar'></image>
+     <view style='font-size:12px;margin:-0.5rem 0 0.5rem;'>（点击修改头像）</view>
+     <input value='{{nickname}}' maxlength='11' class='inputname' bindinput='modifyusername'></input>
+     <button bindtap="modifyinfor" class='confrim_bindmobile'>修改</button>
+   </view>
 </view>

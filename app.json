@@ -1,6 +1,5 @@
 {
   "pages": [
-    
     "pages/teacher/teacher",
     "pages/student/student",
     "pages/personcenter/personcenter",

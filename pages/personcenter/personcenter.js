@@ -11,6 +11,7 @@ Page({
     display3: "none",
     display4: "none",
     mask:"none",
+    mask1: "none",
     user:"",
     phone: "",
     teachernum:"",
@@ -32,6 +33,8 @@ Page({
             display2: 'block',
             display1: 'none',
             user: current,
+            avatar: current.avatar,
+            nickname: current.username
           })
         } else {
           if (current == null) {
@@ -45,6 +48,8 @@ Page({
                 display2: 'block',
                 display1: 'none',
                 user: current,
+                avatar: current.avatar,
+                nickname: current.username
               })
             } else {
               that.setData({
@@ -337,7 +342,8 @@ Page({
   { 
     that.onLoad();
     that.setData({
-      mask:"none"
+      mask:"none",
+      mask1:"none"
     })
   },
 
@@ -418,6 +424,61 @@ Page({
   {
     wx.navigateTo({
       url: 'about_us/about_us',
+    })
+  },
+
+  //编辑个人信息点击
+  edit_infor:function()
+  {
+    that.setData({mask1:"block"})
+  },
+
+  //修改头像点击
+  modifyavatar:function()
+  {
+    wx.chooseImage({
+      success: function (res) {
+        var tempFilePaths = res.tempFilePaths
+        var file;
+        for (let item of tempFilePaths) {
+          console.log('itemn', item)
+          file = Bmob.File(that.data.user.username+'.jpg', item);
+        }
+        file.save().then(res => {
+          var infor = JSON.parse(res[0]);
+          that.setData({ avatar: infor.url});
+        })
+      }
+    })
+  },
+
+  //修改用户昵称
+  modifyusername:function(e)
+  {
+    that.setData({
+      nickname: e.detail.value
+    })
+  },
+
+  //用户信息点击修改
+  modifyinfor:function()
+  {
+    console.log(that.data.nickname,that.data.avatar);
+
+    let current = Bmob.User.current();
+
+    const query = Bmob.Query('_User');
+    query.set('id', current.objectId);
+    query.set('username', that.data.nickname);
+    query.set('avatar', that.data.avatar);
+    query.save().then(res => {
+      that.setData({mask1:"none"});
+      wx.showToast({
+        title: '修改成功',
+      });
+      that.onLoad();
+    }).catch(err => {
+      console.log(err)
     })
   }
 

@@ -46,11 +46,11 @@
   <view class='item1display'>
     <view class='item1'>所获证书：</view>
     <view wx:if="{{detail.award == null}}">暂无</view>
-    <view wx:else>{{detail.award}}</view>
+    <view wx:else style='width:72%;'>{{detail.award}}</view>
   </view>
   <view class='item1display'>
     <view class='item1'>自我描述：</view>
-    <view class='introduce'>{{detail.introduce}}</view>
+    <view class='introduce' style='width:72%;'>{{detail.introduce}}</view>
   </view>
 </view>
 
