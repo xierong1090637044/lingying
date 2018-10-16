@@ -4,15 +4,15 @@
     <view class='title'>展示信息</view>
 
     <view class='item'>
-    <view>求教科目：</view>
-      <view>
+    <view style='width:28%'>求教科目：</view>
+      <view style='width:72%'>
         <input placeholder='年级+科目名称' name="subject" value='{{detail1.subject}}'></input>
       </view>
     </view>
 
     <view class='item'>
-    <view>孩子性别：</view>
-      <view>
+    <view style='width:28%'>孩子性别：</view>
+      <view style='width:72%'>
         <picker bindchange="bindPickerChange" value="{{sex[index1]}}" range="{{sex}}" name="sex">
           {{sex[index1]}}
           <i class="icon iconfont icon-xiangxia1" style="margin-left:8px;font-size:14px"></i>
@@ -21,16 +21,16 @@
     </view>
 
     <view class='item'>
-    <view>学习情况：</view>
-      <view>
+     <view style='width:28%'>学习情况：</view>
+      <view style='width:72%'>
         <textarea placeholder='主要为薄弱科目' name="introduce" maxlength='100'auto-height="true" value='{{detail1.introduce}}'></textarea>
       </view>
     </view>
 
     <view class='item'>
-    <view>上课地点：</view>
-      <view style='display:flex'>
-      <view>
+     <view style='width:28%'>上课地点：</view>
+      <view style='display:flex;width:72%'>
+        <view style='width:85px'>
           <picker bindchange="pickcity" value="{{city[index2]}}" range="{{city}}" name="city">
             {{city[index2]}}
             <i class="icon iconfont icon-xiangxia1" style="margin:0 8px;font-size:14px"></i>
@@ -41,8 +41,8 @@
     </view>
 
     <view class='item'>
-    <view>薪资：</view>
-      <view style='display:flex'>
+    <view style='width:28%'>预付薪资：</view>
+      <view style='display:flex;width:72%'>
         <view style='width:60px'><input placeholder='薪资' name="pay" type='number' maxlength='3' value='{{pay}}'></input></view>
         <view style='line-height:1.4rem;'>/小时</view>
       </view>
@@ -53,8 +53,8 @@
     <view class='title'>详细信息</view>
 
     <view class='item'>
-    <view>孩子年级：</view>
-      <view>
+    <view style='width:28%'>孩子年级：</view>
+      <view style='width:72%'>
         <picker bindchange="pickclass" value="{{class1[class_index]}}" range="{{class1}}" name="class">
           {{class1[class_index]}}
           <i class="icon iconfont icon-xiangxia1" style="margin-left:8px;font-size:14px"></i>
@@ -63,8 +63,8 @@
     </view>
 
     <view class='item'>
-    <view>教员性别：</view>
-      <view>
+    <view style='width:28%'>教员性别：</view>
+       <view style='width:72%'>
         <picker bindchange="picktsex" value="{{sex[t_sex_index]}}" range="{{sex}}" name="t_sex">
           {{sex[t_sex_index]}}
           <i class="icon iconfont icon-xiangxia1" style="margin-left:8px;font-size:14px"></i>
@@ -73,22 +73,22 @@
     </view>
 
     <view class='item'>
-    <view>教员要求：</view>
-      <view>
+     <view style='width:28%'>教员要求：</view>
+      <view style='width:72%'>
         <textarea placeholder='对教员的要求' name="require" maxlength='100'auto-height="true" value='{{detail2.require}}'></textarea>
       </view>
     </view>
 
     <view class='item'>
-    <view>上课时间：</view>
-      <view>
+    <view style='width:28%'>上课时间：</view>
+      <view style='width:72%'>
         <input placeholder='希望上课时间' name="course_time" maxlength='20' value='{{detail2.course_time}}'></input>
       </view>
     </view>
 
     <view class='item'>
-    <view>身份要求：</view>
-      <view>
+    <view style='width:28%'>身份要求：</view>
+      <view style='width:72%'>
         <picker bindchange="pickaptitude" value="{{aptitude[aptitude_index]}}" range="{{aptitude}}" name="aptitude">
           {{aptitude[aptitude_index]}}
           <i class="icon iconfont icon-xiangxia1" style="margin-left:8px;font-size:14px"></i>
