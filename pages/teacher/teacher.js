@@ -18,6 +18,8 @@ Page({
     city:null,
     identify:null,
     limit:20,
+    img_height:"30vh",
+    view_height:"60vh",
   },
 
   /*** 生命周期函数--监听页面加载*/
@@ -106,6 +108,7 @@ Page({
     //下滑刷新
   skiplimit:function()
   {
+    that.setData({ img_height: "0vh", view_height: "90vh",imgshowing: "none"});
     that.data.limit = that.data.limit+20;
     that.getallteacherwithloading(that.data.pay, that.data.city, that.data.identify, that.data.limit)
   },
@@ -198,6 +201,11 @@ Page({
         }
       });
     }
+  },
+
+  changeheight:function()
+  {
+    that.setData({ img_height: "30vh", view_height: "60vh", imgshowing: "block" })
   },
 
   //是否显示发布按钮

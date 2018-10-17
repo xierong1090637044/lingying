@@ -31,7 +31,6 @@ page {
 
 .headerimg {
   width: 100%;
-  height: 30vh;
 }
 
 .select {
@@ -52,7 +51,6 @@ page {
 
 .scrollview {
   margin-top: 10px;
-  height: 60vh;
 }
 
 .alllist {

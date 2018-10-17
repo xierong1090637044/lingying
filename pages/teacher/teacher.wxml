@@ -1,5 +1,5 @@
 <view class='headerstyle'>
-  <image src='http://bmob-cdn-21363.b0.upaiyun.com/2018/10/12/d3ff1b5c403cfb848001c708404aa30b.png' class='headerimg'></image>
+  <image src='http://bmob-cdn-21363.b0.upaiyun.com/2018/10/12/d3ff1b5c403cfb848001c708404aa30b.png' class='headerimg' style='height:{{img_height}};display:{{imgshowing}}'></image>
 
   <!--*筛选器*-->
   <view class='select'>
@@ -42,7 +42,7 @@
   </view>
 
   <!--*内容展示*-->
-  <scroll-view scroll-y="true" class='scrollview' bindscrolltolower="skiplimit">
+  <scroll-view scroll-y="true" class='scrollview' bindscrolltolower="skiplimit" bindscrolltoupper ="changeheight" style='height:{{view_height}}'>
     <view wx:if="{{detail.length==0}}" style='text-align:center'>
       <view style='margin:5% 0'>
         <i class="icon iconfont icon-kulian1 icon-none"></i>
