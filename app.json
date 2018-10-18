@@ -13,7 +13,8 @@
     "pages/teacher/publish/publish",
     "pages/personcenter/teacher_edit/teacher_edit",
     "pages/personcenter/parent_edit/parent_edit",
-    "pages/personcenter/myorder/myorder"
+    "pages/personcenter/myorder/myorder",
+    "pages/personcenter/feedback/feedback"
   ],
   "window": {
     "backgroundTextStyle": "light",

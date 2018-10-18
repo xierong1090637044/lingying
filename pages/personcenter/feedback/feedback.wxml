@@ -1,0 +1,8 @@
+
+<view class='selectitem'>
+<text>意见反馈：</text>
+       <view style='margin:50px auto;'>
+         <textarea class='textareaas' maxlength='150' bindinput="getinput" value='{{content}}'></textarea>
+         <button style='float:right;'class='buttonas' bindtap='submit'>提交</button>
+       </view>
+    </view>

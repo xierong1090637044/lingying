@@ -1,10 +1,10 @@
 <!--第一部分-->
 <view style='display:{{display1}};padding-top:5px' class='frist'>
   <button open-type='getUserInfo' class='loginbutton' plain='true' bindgetuserinfo="onGotUserInfo">登录</button>
-  <view class='aboutus' bindtap='gotoaboutus'>
+  <!-- <view class='aboutus' bindtap='gotoaboutus'>
     <i class="icon iconfont icon-wode icon-aboutus"></i>
     <text>关于我们</text>
-  </view>
+  </view> -->
 </view>
 <view style='display:{{display2}}' class='frist'>
   <image src='{{user.avatar}}' class='avatar'></image>
@@ -14,10 +14,10 @@
       <i class="icon iconfont icon-bianji iocn_edit"></i>
     </view>
   </view>
-  <view class='aboutus' bindtap='gotoaboutus'>
+  <!-- <view class='aboutus' bindtap='gotoaboutus'>
     <i class="icon iconfont icon-wode icon-aboutus"></i>
     <text>关于我们</text>
-  </view>
+  </view> -->
 </view>
 
 <!--第二部分-->
@@ -47,7 +47,7 @@
 
   <view class="trstyle" bindtap='gotomyorder'>
     <view class='leftitem'>
-      <view class='iconborder color2'><i class="icon iconfont icon-kecheng personicon1"></i></view><text>我的申请</text>
+      <view class='iconborder color2'><i class="icon iconfont icon-kecheng personicon1"></i></view><text>申请历史</text>
     </view>
     <view class='leftitem' style="float:right"><i class="icon iconfont icon-youbian personicon"></i></view>
   </view>
@@ -71,6 +71,22 @@
     <view class='leftitem' style="float:right"><i class="icon iconfont icon-youbian personicon"></i></view>
   </view>
   </button>
+   <view class="trstyle" bindtap='gotoaboutus'>
+    <view class='leftitem'>
+      <view class='iconborder color6' >
+      <i class="icon iconfont icon-wode icon-aboutus"></i>
+      </view><text>关于我们</text>
+    </view>
+    <view class='leftitem' style="float:right"><i class="icon iconfont icon-youbian personicon"></i></view>
+  </view>
+  <view class="trstyle" bindtap='gotofeedback'>
+    <view class='leftitem'>
+      <view class='iconborder color6' >
+      <i class="icon iconfont icon-icon personicon1"></i>
+      </view><text>意见反馈</text>
+    </view>
+    <view class='leftitem' style="float:right"><i class="icon iconfont icon-youbian personicon"></i></view>
+  </view>
 </view>
 
 <view class='mask' style='display:{{mask}}' bindtap='hidden'></view>

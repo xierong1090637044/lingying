@@ -426,6 +426,12 @@ Page({
       url: 'about_us/about_us',
     })
   },
+  //意见反馈点击
+  gotofeedback: function () {
+    wx.navigateTo({
+      url: 'feedback/feedback',
+    })
+  },
 
   //编辑个人信息点击
   edit_infor:function()

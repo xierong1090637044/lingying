@@ -1,0 +1,26 @@
+/* pages/personcenter/feedback/feedback.wxss */
+.selectitem
+{
+  display: flex;
+  justify-content: space-between;
+  line-height: 40px;
+  font-size: 16px;
+}
+
+.textareaas
+{
+  width: calc(100vw - 100px);
+  border-radius: 8px;
+  border:1px solid#cecece;
+  padding: 0 5px;
+  line-height:20px;
+}
+.buttonas
+{
+  background: #50d8c0;
+  color: #fff;
+  padding:0 20px;
+  line-height:28px;
+  margin:10px 0;
+  border-radius: 4px;
+}

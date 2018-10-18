@@ -4,29 +4,22 @@
     <view class='image1'>
       <image src='../../../img/logo.png' style='width:80px;height:80px;'></image>
       <view class='image'>
-        <image src='../../../img/logo2.png' style='width:100px;height:35px;'></image>
+        <image src='../../../img/logo2.png' style='width:125px;height:41px;'></image>
       </view>
     </view>
   </view>
-
+<view class='gzhewm'><image src='../../../img/gzhewm.jpg'></image></view>
   <view class='select'>
     <view class='selectitem appborder'>
-        <view>联系电话</view>
-        <view>13752180659</view>
+        <view>联系电话:13752180659</view>
     </view>
-
-    <view class='selectitem appborder'>
-        <view>联系微信</view>
-        <view>xierong1090637044</view>
-    </view>
-
-    <view class='selectitem'>
+    <!-- <view class='selectitem'>
        <view>意见反馈</view>
        <view style='margin-top:15px;'>
          <textarea class='textareaas' maxlength='150' bindinput="getinput" value='{{content}}'></textarea>
          <button style='float:right' class='buttonas' bindtap='submit'>提交</button>
        </view>
-    </view>
+    </view> -->
   </view>
 
 </view>
